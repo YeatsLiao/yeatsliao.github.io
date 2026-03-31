@@ -5,6 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 # Site Settings
+future: true
 title                    : "Yeats_Liao"
 description              : "Freedom is more important than life, focus is more important than thinking. "
 repository               : "yeatsliao/yeatsliao.github.io"

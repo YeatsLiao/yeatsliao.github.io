@@ -10,7 +10,7 @@ tags: [Jekyll, Web]
 
 ## 1. 使用包含文件 (Includes)
 
-你可以将重复的 HTML 代码片段放在 `_includes` 目录中，然后使用 `{% include filename.html %}` 来引用它们。
+你可以将重复的 HTML 代码片段放在 `_includes` 目录中，然后使用 `{% raw %}{% include filename.html %}{% endraw %}` 来引用它们。
 
 ## 2. 数据文件 (Data Files)
 
