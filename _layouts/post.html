@@ -3,13 +3,44 @@ layout: default
 author_profile: true
 ---
 
-<header>
-  <h1 class="page__title" itemprop="headline">{{ page.title | escape }}</h1>
-  {% if page.date %}
-    <p class="page__meta" style="color: #888; margin-top: -10px; margin-bottom: 20px;">
-      <i class="far fa-clock" aria-hidden="true"></i> {{ page.date | date: "%B %d, %Y" }}
-    </p>
-  {% endif %}
-</header>
+<article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+  <div class="page__inner-wrap">
+    <header>
+      <h1 class="page__title" itemprop="headline">{{ page.title | escape }}</h1>
+      {% if page.date %}
+        <p class="page__meta" style="color: #888; margin-top: -10px; margin-bottom: 20px;">
+          <i class="far fa-clock" aria-hidden="true"></i> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        </p>
+      {% endif %}
+    </header>
 
-{{ content }}
+    <section class="page__content" itemprop="text" style="line-height: 1.8; font-size: 1.05em; color: #333;">
+      {{ content }}
+    </section>
+
+    <footer class="page__meta" style="margin-top: 3em; padding-top: 1.5em; border-top: 1px solid #eaeaea;">
+      <!-- 分页与返回导航 -->
+      <nav class="pagination" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        
+        <div style="flex: 1; text-align: left; min-width: 100px;">
+        {% if page.previous %}
+          <a href="{{ page.previous.url | relative_url }}" class="pagination--pager" title="{{ page.previous.title | escape }}" style="text-decoration: none; padding: 0.6em 1.2em; border: 1px solid #ddd; border-radius: 5px; display: inline-block; background-color: #fff; color: #007bff; transition: all 0.2s; font-size: 0.95em;" onmouseover="this.style.backgroundColor='#f0f8ff'; this.style.borderColor='#007bff';" onmouseout="this.style.backgroundColor='#fff'; this.style.borderColor='#ddd';">&laquo; 上一篇</a>
+        {% endif %}
+        </div>
+
+        <div style="flex: 2; text-align: center; min-width: 200px;">
+          <a href="javascript:history.back()" style="text-decoration: none; padding: 0.6em 1.2em; border: 1px solid #ddd; border-radius: 5px; display: inline-block; background-color: #fff; color: #555; transition: all 0.2s; font-size: 0.95em; margin-right: 10px;" onmouseover="this.style.backgroundColor='#f9f9f9'; this.style.borderColor='#ccc';" onmouseout="this.style.backgroundColor='#fff'; this.style.borderColor='#ddd';">返回上一页</a>
+          
+          <a href="{{ '/blog/' | relative_url }}" style="text-decoration: none; padding: 0.6em 1.2em; border: 1px solid #ddd; border-radius: 5px; display: inline-block; background-color: #fff; color: #555; transition: all 0.2s; font-size: 0.95em;" onmouseover="this.style.backgroundColor='#f9f9f9'; this.style.borderColor='#ccc';" onmouseout="this.style.backgroundColor='#fff'; this.style.borderColor='#ddd';">博客列表</a>
+        </div>
+
+        <div style="flex: 1; text-align: right; min-width: 100px;">
+        {% if page.next %}
+          <a href="{{ page.next.url | relative_url }}" class="pagination--pager" title="{{ page.next.title | escape }}" style="text-decoration: none; padding: 0.6em 1.2em; border: 1px solid #ddd; border-radius: 5px; display: inline-block; background-color: #fff; color: #007bff; transition: all 0.2s; font-size: 0.95em;" onmouseover="this.style.backgroundColor='#f0f8ff'; this.style.borderColor='#007bff';" onmouseout="this.style.backgroundColor='#fff'; this.style.borderColor='#ddd';">下一篇 &raquo;</a>
+        {% endif %}
+        </div>
+        
+      </nav>
+    </footer>
+  </div>
+</article>
