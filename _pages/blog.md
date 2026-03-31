@@ -9,7 +9,7 @@ author_profile: true
   <h1 class="page__title">Blog</h1>
 </header>
 
-<div class="entries-list">
+<div class="archive">
   {% for post in site.posts %}
     <div class="list__item">
       <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
