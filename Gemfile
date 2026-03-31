@@ -19,7 +19,7 @@ gem "tzinfo-data", platforms: [:windows]
 
 # gem "jekyll"
 
-# gem "wdm", "~> 0.1.0" if Gem.win_platform?
+gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
@@ -30,3 +30,10 @@ group :jekyll_plugins do
 end
 
 gem "webrick", "~> 1.8"
+gem "csv", "~> 3.3"
+
+gem "base64", "~> 0.3.0"
+
+gem "bigdecimal", "~> 4.1"
+gem "logger", "~> 1.7"
+gem "mutex_m", "~> 0.3.0"
