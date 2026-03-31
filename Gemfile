@@ -11,7 +11,7 @@ source "https://rubygems.org"
 
 gem "github-pages", group: :jekyll_plugins
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+gem "tzinfo-data", platforms: [:windows]
 
 
 # If you want to use Jekyll native, uncomment the line below.
@@ -30,7 +30,6 @@ group :jekyll_plugins do
 end
 
 gem "webrick", "~> 1.8"
-
 gem "csv", "~> 3.3"
 
 gem "base64", "~> 0.3.0"
