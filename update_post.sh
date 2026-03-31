@@ -1,0 +1,180 @@
+cat << 'POST' > _layouts/post.html
+---
+layout: default
+author_profile: true
+---
+
+<style>
+  /* 现代化代码块样式，并控制最大宽度以免溢出 */
+  .page__content pre {
+    font-size: 14px !important;
+    padding: 1.2em !important;
+    border-radius: 8px !important;
+    background-color: #282c34 !important;
+    color: #abb2bf !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    overflow-x: auto !important;
+    line-height: 1.5 !important;
+    margin: 1.5em 0 !important;
+    max-width: 100%;
+  }
+  .page__content code {
+    font-family: 'Fira Code', 'Consolas', Monaco, monospace !important;
+  }
+  .page__content p > code, .page__content li > code {
+    background-color: rgba(27, 31, 35, 0.05) !important;
+    color: #d63384 !important;
+    padding: 0.2em 0.4em !important;
+    border-radius: 4px !important;
+    font-size: 0.9em !important;
+  }
+
+  /* 现代化底部导航样式 */
+  .post-action-nav {
+    margin-top: 3em;
+    padding-top: 1.5em;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .post-action-nav .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .post-action-nav .btn-modern {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    color: #495057;
+    border: 1px solid transparent;
+  }
+
+  .post-action-nav .btn-modern:hover {
+    background: #fff;
+    color: #007bff;
+    border-color: #007bff;
+    box-shadow: 0 4px 8px rgba(0,123,255,0.15);
+    transform: translateY(-2px);
+  }
+
+  .post-action-nav .post-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  @media (max-width: 768px) {
+    .post-action-nav .post-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .post-card {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #edf2f7;
+    border-radius: 12px;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  }
+
+  .post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+    border-color: #cce5ff;
+  }
+
+  .post-card.prev { align-items: flex-start; text-align: left; }
+  .post-card.next { align-items: flex-end; text-align: right; }
+
+  .post-card .nav-label {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6c757d;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .post-card .nav-title {
+    font-size: 1.05em;
+    font-weight: 600;
+    color: #212529;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+  }
+
+  .post-card:hover .nav-title {
+    color: #007bff;
+  }
+</style>
+
+<header>
+  <h1 class="page__title" itemprop="headline">{{ page.title | escape }}</h1>
+  {% if page.date %}
+    <p class="page__meta" style="color: #888; margin-top: -10px; margin-bottom: 20px;">
+      <i class="far fa-clock" aria-hidden="true"></i> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+    </p>
+  {% endif %}
+</header>
+
+{{ content }}
+
+<footer class="post-action-nav">
+  <!-- 中部动作按钮 -->
+  <div class="action-buttons">
+    <a href="javascript:history.back()" class="btn-modern">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Go Back
+    </a>
+    <a href="{{ '/blog/' | relative_url }}" class="btn-modern">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      All Posts
+    </a>
+  </div>
+
+  <!-- 底部卡片导航 -->
+  <div class="post-cards">
+    {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}" class="post-card prev">
+        <span class="nav-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          Previous Post
+        </span>
+        <h3 class="nav-title">{{ page.previous.title | escape }}</h3>
+      </a>
+    {% else %}
+      <div></div> <!-- 占位以保持网格布局 -->
+    {% endif %}
+
+    {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}" class="post-card next">
+        <span class="nav-label">
+          Next Post
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </span>
+        <h3 class="nav-title">{{ page.next.title | escape }}</h3>
+      </a>
+    {% else %}
+      <div></div> <!-- 占位以保持网格布局 -->
+    {% endif %}
+  </div>
+</footer>
+POST
