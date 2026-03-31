@@ -18,7 +18,7 @@ redirect_from:
 <span class="anchor" id="about-me"></span>
 
 <header>
-  <h1 class="page__title">About Me</h1>
+  <h1 class="page__title">👋 About Me</h1>
 </header>
 
 
