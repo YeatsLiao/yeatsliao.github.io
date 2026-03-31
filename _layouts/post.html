@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<header>
+  <h1 class="page__title" itemprop="headline">{{ page.title | escape }}</h1>
+  {% if page.date %}
+    <p class="page__meta" style="color: #888; margin-top: -10px; margin-bottom: 20px;">
+      <i class="far fa-clock" aria-hidden="true"></i> {{ page.date | date: "%B %d, %Y" }}
+    </p>
+  {% endif %}
+</header>
+
+<section class="page__content" itemprop="text">
+  {{ content }}
+</section>
