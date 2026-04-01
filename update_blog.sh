@@ -1,3 +1,4 @@
+cat << 'BLOG' > _pages/blog.md
 ---
 layout: default
 permalink: /blog/
@@ -41,3 +42,4 @@ author_profile: true
     {% endfor %}
   </div>
 </div>
+BLOG

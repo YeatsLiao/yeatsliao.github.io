@@ -1,3 +1,4 @@
+cat << 'POST' > _layouts/post.html
 ---
 layout: default
 author_profile: true
@@ -176,3 +177,4 @@ author_profile: true
     {% endif %}
   </div>
 </footer>
+POST
