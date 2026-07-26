@@ -9,7 +9,10 @@ author_profile: true
   <h1 class="page__title">📅 Activities</h1>
 </header>
 
-社区活动、内容创作与获奖记录时间线。
+<p>
+  <span class="i18n-zh">社区活动、内容创作与获奖记录时间线。</span>
+  <span class="i18n-en">A timeline of community activities, content creation, and awards.</span>
+</p>
 
 <div class="archive" style="margin-top: 1em;">
   <div class="timeline" style="position: relative; padding-left: 20px;">
@@ -34,24 +37,24 @@ author_profile: true
 
           <h3 class="archive__item-title" style="margin: 0 0 0.4em 0; font-size: 1.2em; font-weight: 600; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
             {% if activity.link %}
-              <a href="{{ activity.link }}" style="text-decoration: none; color: #212529;" onmouseover="this.style.color='#28a745';" onmouseout="this.style.color='#212529';">{{ activity.title }}</a>
+              <a href="{{ activity.link }}" style="text-decoration: none; color: #212529;" onmouseover="this.style.color='#28a745';" onmouseout="this.style.color='#212529';"><span class="i18n-zh">{{ activity.title.zh }}</span><span class="i18n-en">{{ activity.title.en }}</span></a>
             {% else %}
-              <span style="color: #212529;">{{ activity.title }}</span>
+              <span style="color: #212529;"><span class="i18n-zh">{{ activity.title.zh }}</span><span class="i18n-en">{{ activity.title.en }}</span></span>
             {% endif %}
             {% if activity.role %}
-              <span style="font-size: 0.65em; font-weight: 500; padding: 2px 12px; border-radius: 20px; background: #e7f5ec; color: #28a745;">{{ activity.role }}</span>
+              <span style="font-size: 0.65em; font-weight: 500; padding: 2px 12px; border-radius: 20px; background: #e7f5ec; color: #28a745;"><span class="i18n-zh">{{ activity.role.zh }}</span><span class="i18n-en">{{ activity.role.en }}</span></span>
             {% endif %}
           </h3>
           <p class="page__meta" style="color: #6c757d; font-size: 0.85em; margin: 0 0 0.8em 0; display: flex; align-items: center; gap: 5px;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-            <time datetime="{{ activity.date }}">{{ activity.date | date: "%Y年%m月%d日" }}</time>
+            <time datetime="{{ activity.date }}"><span class="i18n-zh">{{ activity.date | date: "%Y年%m月%d日" }}</span><span class="i18n-en">{{ activity.date | date: "%b %d, %Y" }}</span></time>
           </p>
           {% if activity.desc %}
-          <div class="archive__item-excerpt" style="font-size: 0.95em; color: #495057; line-height: 1.6; margin: 0;">{{ activity.desc }}</div>
+          <div class="archive__item-excerpt" style="font-size: 0.95em; color: #495057; line-height: 1.6; margin: 0;"><span class="i18n-zh">{{ activity.desc.zh }}</span><span class="i18n-en">{{ activity.desc.en }}</span></div>
           {% endif %}
           {% if activity.image %}
           <div style="margin-top: 1em;">
-            <img src="{{ activity.image | relative_url }}" alt="{{ activity.title }}" loading="lazy" style="max-width: 100%; border-radius: 8px;">
+            <img src="{{ activity.image | relative_url }}" alt="{{ activity.title.zh }}" loading="lazy" style="max-width: 100%; border-radius: 8px;">
           </div>
           {% endif %}
         </article>

@@ -2,38 +2,68 @@
 # 新增活动只需在此追加条目，页面自动渲染（按 date 倒序排列）
 # 字段说明：
 #   date:  活动日期（YYYY-MM-DD，必填）
-#   title: 活动标题（必填）
-#   role:  担任角色，如 导师 / 讲师 / 参与者 / 获奖者（选填）
-#   desc:  一句话描述（选填）
+#   title: 活动标题，zh/en 双语（必填）
+#   role:  担任角色，zh/en 双语，如 导师/讲师/参与者/获奖者（选填）
+#   desc:  一句话描述，zh/en 双语（选填）
 #   link:  相关链接（选填）
 #   image: 活动照片，放 images/activities/ 下，命名 {YYYY-MM-DD}-{活动名}-{序号}.webp（选填）
 
 - date: 2026-04-11
-  title: demowall 活动 · huzhou-playbox 互动应用
-  role: 开发者
-  desc: 为 demowall 活动开发互动小游戏应用，以轻量玩法展示湖州文化特色。
+  title:
+    zh: demowall 活动 · huzhou-playbox 互动应用
+    en: demowall Event · huzhou-playbox Interactive App
+  role:
+    zh: 开发者
+    en: Developer
+  desc:
+    zh: 为 demowall 活动开发互动小游戏应用，以轻量玩法展示湖州文化特色。
+    en: Built an interactive mini-game app for the demowall event, showcasing Huzhou's culture through lightweight gameplay.
   link: https://github.com/YeatsLiao/huzhou-playbox
 
 - date: 2026-05-01
-  title: 华为鲲鹏社区 5 月精选博文
-  role: 作者
-  desc: 《鲲鹏服务器上 FFmpeg 视频转码性能优化实录》等多篇实战文章入选鲲鹏社区精选博文。
+  title:
+    zh: 华为鲲鹏社区 5 月精选博文
+    en: Huawei Kunpeng Community Featured Posts (May)
+  role:
+    zh: 作者
+    en: Author
+  desc:
+    zh: 《鲲鹏服务器上 FFmpeg 视频转码性能优化实录》等多篇实战文章入选鲲鹏社区精选博文。
+    en: Multiple hands-on articles, including "FFmpeg Video Transcoding Performance Tuning on Kunpeng Servers", were selected as featured posts by the Kunpeng community.
   link: https://developer.huawei.com/home/forum/kunpeng/
 
 - date: 2025-12-01
-  title: 昇腾社区体验官活动
-  role: 体验官
-  desc: 参与昇腾社区搜索功能体验活动并获奖，持续输出昇腾平台 DeepSeek 与算法实战内容。
+  title:
+    zh: 昇腾社区体验官活动
+    en: Ascend Community Experience Officer Program
+  role:
+    zh: 体验官
+    en: Experience Officer
+  desc:
+    zh: 参与昇腾社区搜索功能体验活动并获奖，持续输出昇腾平台 DeepSeek 与算法实战内容。
+    en: Won an award in the Ascend community search experience program; continuously publishing DeepSeek and algorithm practice content on the Ascend platform.
   link: https://www.hiascend.com/
 
 - date: 2025-06-01
-  title: 六年 CSDN 博主路
-  role: 创作者
-  desc: 发布《2025 回顾：六年 CSDN 博主路，从传统开发到拥抱 AI 浪潮》，总结从传统后端开发到 AI 应用的技术转型。
+  title:
+    zh: 六年 CSDN 博主路
+    en: Six Years as a CSDN Blogger
+  role:
+    zh: 创作者
+    en: Creator
+  desc:
+    zh: 发布《2025 回顾：六年 CSDN 博主路，从传统开发到拥抱 AI 浪潮》，总结从传统后端开发到 AI 应用的技术转型。
+    en: "Published \"2025 Retrospective: Six Years of CSDN Blogging, from Traditional Development to the AI Wave\", reflecting on the transition from backend development to AI applications."
   link: https://blog.csdn.net/qq_46207024
 
 - date: 2023-03-01
-  title: CSDN 2022 博客之星评选
-  role: 获奖者
-  desc: 获评 CSDN 2022 博客之星 TOP71，Java 领域优质创作者。
+  title:
+    zh: CSDN 2022 博客之星评选
+    en: CSDN 2022 Blog Star Awards
+  role:
+    zh: 获奖者
+    en: Award Winner
+  desc:
+    zh: 获评 CSDN 2022 博客之星 TOP71，Java 领域优质创作者。
+    en: Ranked TOP71 in the CSDN 2022 Blog Star Awards; recognized as a top creator in the Java field.
   link: https://yeatsliao.blog.csdn.net/
