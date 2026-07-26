@@ -1,10 +1,15 @@
-# main links links
+# 导航栏链接
+# 字段：title（英文名）、title_zh（中文名，选填，填了即随语言切换）、url
 main:
   - title: "Projects"
+    title_zh: "项目"
     url: "/projects/"
+  - title: "Honors"
+    title_zh: "荣誉"
+    url: "/honors/"
   - title: "Activities"
+    title_zh: "活动"
     url: "/activities/"
   - title: "Blog"
+    title_zh: "博客"
     url: "/blog/"
-
-
