@@ -8,6 +8,7 @@
           {% for link in site.data.navigation.main %}
             <li class="masthead__menu-item"><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
           {% endfor %}
+          <li class="masthead__menu-item"><a id="lang-toggle" class="lang-toggle-link" onclick="toggleSiteLang()" title="切换语言 / Switch language">EN</a></li>
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
