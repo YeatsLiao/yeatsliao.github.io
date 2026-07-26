@@ -1,0 +1,45 @@
+# 个人资料数据（About 页首屏、教育、工作经历）
+# 修改简介、徽章、教育、工作经历只需编辑此文件
+# 每条文字均有 zh / en 两个字段，对应中英文切换
+
+# ===== 首屏简介（按顺序渲染为段落）=====
+intro:
+  - zh: Java 后端 / AI 应用开发者，现任浙江大学湖州研究院（HIZJU）数字技术应用研究中心技术负责人。
+    en: Java Backend / AI Application Developer. Technical Lead at the Digital Technology Application Research Center, Huzhou Institute of Zhejiang University (HIZJU).
+  - zh: 六年技术写作：CSDN 博客专家（2022 博客之星 TOP71）、阿里云专家博主、华为云云享专家、腾讯云创作之星，CSDN 博客 90W+ 阅读、4W+ 粉丝，Java 领域优质创作者、后端开发领域专家。
+    en: "Six years of technical writing: CSDN Blog Expert (2022 Blog Star TOP71), Alibaba Cloud Expert Blogger, Huawei Cloud MVP, Tencent Cloud Creation Star. 900K+ views and 40K+ followers on CSDN. Recognized as a top creator in the Java field and a backend development domain expert."
+
+# ===== 影响力徽章条（img 为 shields.io 徽章地址，link 选填）=====
+badges:
+  - img: https://img.shields.io/github/followers/YeatsLiao?label=GitHub%20Followers&style=flat-square&logo=github
+    alt: GitHub Followers
+    link: https://github.com/YeatsLiao
+  - img: https://img.shields.io/badge/CSDN-%E5%8D%9A%E5%AE%A2%E4%B8%93%E5%AE%B6%20%C2%B7%2040K%2B%20%E7%B2%89%E4%B8%9D-fc5531?style=flat-square
+    alt: CSDN
+    link: https://yeatsliao.blog.csdn.net/
+  - img: https://img.shields.io/badge/%E9%98%BF%E9%87%8C%E4%BA%91-%E4%B8%93%E5%AE%B6%E5%8D%9A%E4%B8%BB-ff6a00?style=flat-square
+    alt: Aliyun Expert
+    link: https://developer.aliyun.com/profile/h4ged5ha4xsfs
+  - img: https://img.shields.io/badge/%E5%8D%8E%E4%B8%BA%E4%BA%91-%E4%BA%91%E4%BA%AB%E4%B8%93%E5%AE%B6-c7000b?style=flat-square
+    alt: Huawei Cloud Expert
+  - img: https://img.shields.io/badge/%E8%85%BE%E8%AE%AF%E4%BA%91-%E5%88%9B%E4%BD%9C%E4%B9%8B%E6%98%9F-00a4ff?style=flat-square
+    alt: Tencent Cloud
+    link: https://developer.cloud.tencent.com/user/11176808
+
+# ===== 教育经历 =====
+education:
+  - period: 2019.09 - 2023.06
+    link: https://gjxy-en.jift.edu.cn/index.htm
+    zh: 江西服装学院（JIFT），物联网工程 本科，GPA 3.39/4.00，专业排名 1/39
+    en: Jiangxi Institute of Fashion Technology (JIFT), B.Eng. in Internet of Things Engineering, GPA 3.39/4.00, ranked 1st out of 39.
+
+# ===== 工作经历 =====
+experience:
+  - period: 2023.06 - now
+    link: http://hzi.zju.edu.cn/site/team
+    zh: 浙江大学湖州研究院（HIZJU），数字技术应用研究中心，软件开发工程师 → 技术负责人
+    en: Huzhou Institute of Zhejiang University (HIZJU), Digital Technology Application Research Center, Software Development Engineer → Technical Lead.
+  - period: 2022.12 - 2023.06
+    link: http://www.aheadsoft.com.cn/
+    zh: Aheadsoft，软件研发中心，软件开发工程师
+    en: Aheadsoft, Software R&D Center, Software Development Engineer.

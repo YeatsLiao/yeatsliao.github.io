@@ -1,0 +1,28 @@
+# 技术技能数据
+# 增删技能只需编辑此文件：headline 为核心专长，groups 为分组技能清单
+
+headline:
+  zh: "核心专长：Java 后端架构 · AI 应用开发 · 物联网"
+  en: "Core Expertise: Java Backend Architecture · AI Application Development · IoT"
+
+groups:
+  - name:
+      zh: 后端
+      en: Backend
+    items: Java、Spring Boot / MVC / Cloud / Security、MyBatis / MyBatis-Plus、MySQL、Redis、InfluxDB、RabbitMQ / MQTT
+  - name:
+      zh: AI / 国产算力
+      en: AI / Domestic Computing
+    items: MindSpore、昇腾（Ascend）、鲲鹏（Kunpeng）性能调优、LLM 应用与 Agent 开发
+  - name:
+      zh: 工程化
+      en: Engineering
+    items: Docker、Nginx、Jenkins、Maven、Git、UNIX/Linux
+  - name:
+      zh: 前端 / Web
+      en: Frontend / Web
+    items: JavaScript (ES6)、Node.js、jQuery / Ajax、NPM / Babel / Webpack
+  - name:
+      zh: 云服务
+      en: Cloud Services
+    items: 华为云弹性云服务器、弹性伸缩、容器使用；阿里云弹性计算

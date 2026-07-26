@@ -1,0 +1,27 @@
+# 荣誉与证书数据
+# community 为社区荣誉（徽章墙），awards 为证书与奖项（按时间倒序展示）
+# 新增条目：直接在对应列表追加即可
+
+community:
+  - zh: CSDN 博客专家 · 2022 博客之星 TOP71 · Java 领域优质创作者 · 后端开发领域专家
+    en: CSDN Blog Expert · 2022 Blog Star TOP71 · Top Creator in Java · Backend Development Domain Expert
+  - zh: 阿里云专家博主 · 华为云云享专家 · 腾讯云创作之星 · Trae Expert
+    en: Alibaba Cloud Expert Blogger · Huawei Cloud MVP · Tencent Cloud Creation Star · Trae Expert
+
+awards:
+  - period: 2023 - 2024
+    zh: 阿里云弹性计算 Clouder 系列认证
+    en: Alibaba Cloud Elastic Computing Clouder series certification
+    # image: images/certs/2024-aliyun-clouder-openapi.webp   # 证书图片（选填，放 images/certs/ 下）
+  - period: 2022 - 2023
+    zh: 华为云 HCCDA-AI 认证；腾讯云架构工程师（TCA）认证；青训营 X 字节前端训练营 & 后端训练营
+    en: Huawei Cloud HCCDA-AI certification; Tencent Cloud Architecture Engineer (TCA) certification; Youth Training Camp X ByteDance Frontend & Backend Camp
+  - period: 2021 - 2022
+    zh: 国家励志奖学金；第 25 届润华奖程序设计竞赛三等奖
+    en: National Endeavor Fellowship; Third prize in the 25th Runhua Award Programming Competition
+  - period: 2020 - 2021
+    zh: 国家励志奖学金；阿里巴巴数字化管理专业认证
+    en: National Endeavor Fellowship; Alibaba Certified Digital Management Professional Qualification
+  - period: 2019 - 2020
+    zh: 校级奖学金
+    en: School scholarship
