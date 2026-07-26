@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 <header>
-  <h1 class="page__title">📅 Activities</h1>
+  <h1 class="page__title">Activities</h1>
 </header>
 
 <p>

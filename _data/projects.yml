@@ -10,8 +10,8 @@
 categories:
   - id: ai
     name:
-      zh: 🤖 AI 应用
-      en: 🤖 AI Applications
+      zh: AI 应用
+      en: AI Applications
     items:
       - name: emotion-sky
         link: https://github.com/YeatsLiao/emotion-sky
@@ -40,8 +40,8 @@ categories:
 
   - id: learning
     name:
-      zh: 📚 交互式学习平台
-      en: 📚 Interactive Learning Platforms
+      zh: 交互式学习平台
+      en: Interactive Learning Platforms
     items:
       - name: design-patterns-23
         link: https://github.com/YeatsLiao/design-patterns-23
@@ -58,8 +58,8 @@ categories:
 
   - id: docs
     name:
-      zh: 📖 开源文档与工具
-      en: 📖 Open Source Docs & Tools
+      zh: 开源文档与工具
+      en: Open Source Docs & Tools
     items:
       - name: rxtx-docs-cn
         link: https://github.com/YeatsLiao/rxtx-docs-cn

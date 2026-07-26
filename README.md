@@ -12,7 +12,7 @@
 
 在线访问：<https://yeatsliao.github.io>
 
-## ✨ 功能特性
+## 功能特性
 
 - **数据驱动内容**：简介、技能、荣誉、项目、活动全部存放在 `_data/*.yml`，增删改查只需编辑 YAML
 - **中英文切换**：导航栏一键切换，偏好持久化在浏览器 localStorage
@@ -21,7 +21,7 @@
 - **博客时间轴**：Markdown 写作，按年份归档
 - **响应式设计**：适配桌面 / 平板 / 移动端
 
-## 🏗 项目架构
+## 项目架构
 
 ```
 yeatsliao.github.io
@@ -52,7 +52,7 @@ yeatsliao.github.io
     └── badges/              #   徽章素材
 ```
 
-## 📝 内容维护指南
+## 内容维护指南
 
 日常增删改查只涉及 `_data/` 下的 YAML 文件和 `_posts/` 目录，保存后 Jekyll 自动重新渲染。
 
@@ -84,14 +84,14 @@ yeatsliao.github.io
 - 活动照片：`images/activities/2026-04-11-demowall-01.webp`
 - 证书：`images/certs/2024-aliyun-clouder-openapi.webp`
 
-## 🌐 中英文切换机制
+## 中英文切换机制
 
 - 导航栏 `EN / 中文` 按钮切换语言，偏好存于 `localStorage`（key: `site-lang`，默认中文）
 - 实现方式：`<html>` 根元素挂 `lang-en` 类，CSS 控制 `.i18n-zh` / `.i18n-en` 的显隐
 - 页面模板中双语文字写法：`<span class="i18n-zh">中文</span><span class="i18n-en">English</span>`
 - 数据文件中新增内容只要填好 `zh` / `en` 字段，切换自动生效
 
-## 🚀 本地运行
+## 本地运行
 
 需要 Ruby 3.x 与 Bundler：
 
@@ -105,10 +105,10 @@ bundle exec jekyll serve
 
 推送到 `main` 分支后由 GitHub Pages 自动构建部署。
 
-## 🙏 致谢
+## 致谢
 
 主题基于 [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io)（源自 [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes)）二次开发，感谢原作者。
 
-## 📄 开源协议
+## 开源协议
 
 本项目采用 [MIT 许可证](LICENSE) 开源。

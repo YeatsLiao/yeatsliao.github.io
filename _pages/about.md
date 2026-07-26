@@ -11,7 +11,7 @@ redirect_from:
 <span class="anchor" id="about-me"></span>
 
 <header>
-  <h1 class="page__title">👋 About Me</h1>
+  <h1 class="page__title">About Me</h1>
 </header>
 
 {% for para in site.data.profile.intro %}
@@ -24,7 +24,7 @@ redirect_from:
 {% endfor %}
 </p>
 
-# 🔥 Technical Skills
+# Technical Skills
 
 **<span class="i18n-zh">{{ site.data.skills.headline.zh }}</span><span class="i18n-en">{{ site.data.skills.headline.en }}</span>**
 
@@ -34,7 +34,7 @@ redirect_from:
 {% endfor %}
 </ul>
 
-# 🎖 Honors and Awards
+# Honors and Awards
 
 **<span class="i18n-zh">社区荣誉</span><span class="i18n-en">Community Honors</span>**
 
@@ -54,7 +54,7 @@ redirect_from:
 {% endfor %}
 </ul>
 
-# 📖 Educations
+# Educations
 
 <ul>
 {% for edu in site.data.profile.education %}
@@ -62,7 +62,7 @@ redirect_from:
 {% endfor %}
 </ul>
 
-# 💻 Work Experience
+# Work Experience
 
 <ul>
 {% for job in site.data.profile.experience %}

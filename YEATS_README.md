@@ -10,7 +10,7 @@
 
 Live site: <https://yeatsliao.github.io>
 
-## ✨ Features
+## Features
 
 - **Data-driven content**: intro, skills, honors, projects, and activities all live in `_data/*.yml` — CRUD by editing YAML only
 - **Chinese/English toggle**: one-click switch in the navbar, preference persisted in localStorage
@@ -19,7 +19,7 @@ Live site: <https://yeatsliao.github.io>
 - **Blog timeline**: Markdown writing, archived by year
 - **Responsive design**: desktop / tablet / mobile
 
-## 🏗 Architecture
+## Architecture
 
 ```
 yeatsliao.github.io
@@ -50,7 +50,7 @@ yeatsliao.github.io
     └── badges/              #   Badge assets
 ```
 
-## 📝 Content Maintenance Guide
+## Content Maintenance Guide
 
 Daily maintenance only involves the YAML files under `_data/` and the `_posts/` directory; Jekyll re-renders automatically.
 
@@ -82,14 +82,14 @@ Daily maintenance only involves the YAML files under `_data/` and the `_posts/` 
 - Activity photo: `images/activities/2026-04-11-demowall-01.webp`
 - Certificate: `images/certs/2024-aliyun-clouder-openapi.webp`
 
-## 🌐 Language Toggle Mechanism
+## Language Toggle Mechanism
 
 - The `EN / 中文` button in the navbar switches languages; the preference is stored in `localStorage` (key: `site-lang`, default Chinese)
 - Implementation: a `lang-en` class on the `<html>` element, with CSS controlling `.i18n-zh` / `.i18n-en` visibility
 - Bilingual markup in templates: `<span class="i18n-zh">中文</span><span class="i18n-en">English</span>`
 - New content in data files switches automatically once its `zh` / `en` fields are filled in
 
-## 🚀 Local Development
+## Local Development
 
 Requires Ruby 3.x and Bundler:
 
@@ -103,10 +103,10 @@ bundle exec jekyll serve
 
 Pushing to the `main` branch triggers automatic build and deployment via GitHub Pages.
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 The theme is based on [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) (derived from [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes)). Thanks to the original authors.
 
-## 📄 License
+## License
 
 This project is open-sourced under the [MIT License](LICENSE).

@@ -68,7 +68,7 @@ author_profile: true
 </style>
 
 <header>
-  <h1 class="page__title">🚀 Projects</h1>
+  <h1 class="page__title">Projects</h1>
 </header>
 
 <p>
