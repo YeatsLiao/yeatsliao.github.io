@@ -1,18 +1,16 @@
 # 开源项目数据
 # 新增项目：在 categories 下对应分类的 items 中追加条目即可，页面自动渲染
-# 分类字段：id、name（zh/en）、color（分类色条颜色）
 # 项目字段说明：
 #   name:     项目名（必填）
-#   repo:     GitHub 仓库（用户名/仓库名，无 image 时自动用 GitHub OpenGraph 图做封面兜底）
-#   link:     仓库/主页链接（必填）
+#   link:     仓库/主页链接（必填，GitHub/AtomGit/Gitee 等任意平台都行）
 #   desc:     一句话描述，zh/en 双语（必填）
 #   tags:     技术栈标签列表（必填）
-#   featured: true 时置顶到"精选项目"左图右文大卡区（建议保持 2-3 个）
-#   image:    项目截图，放 images/projects/ 下，命名 {项目名}-cover.webp（选填，优先于 OpenGraph 兜底）
+#   featured: true 时置顶到"精选项目"大卡区（建议保持 2-3 个）；其余项目统一紧凑小卡，不带封面
+#   repo:     GitHub 仓库（用户名/仓库名），仅精选项目用于 OpenGraph 封面兜底，非 GitHub 项目不填
+#   image:    项目截图，放 images/projects/ 下（选填，仅精选项目展示，优先于 OpenGraph）
 
 categories:
   - id: ai
-    color: "#7c3aed"
     name:
       zh: AI 应用
       en: AI Applications
@@ -48,7 +46,6 @@ categories:
         tags: [MindSpore, NLP, Open Source]
 
   - id: learning
-    color: "#007bff"
     name:
       zh: 交互式学习平台
       en: Interactive Learning Platforms
@@ -70,7 +67,6 @@ categories:
         tags: [TypeScript, Java Teaching, Animation]
 
   - id: docs
-    color: "#0f766e"
     name:
       zh: 开源文档与工具
       en: Open Source Docs & Tools

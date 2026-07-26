@@ -55,11 +55,11 @@ author_profile: true
   }
   .featured-card h3 a { color: #212529; text-decoration: none; }
   .featured-card h3 a:hover { color: #007bff; }
-  /* 分类网格小卡 */
+  /* 分类网格紧凑小卡（项目多也不乱） */
   .project-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 14px;
   }
   @media (max-width: 768px) {
     .project-grid { grid-template-columns: 1fr; }
@@ -68,40 +68,28 @@ author_profile: true
     display: flex;
     flex-direction: column;
     background: #fff;
-    border: 1px solid #f1f3f5;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1em 1.1em;
+    transition: border-color 0.2s ease;
   }
   .project-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.06);
-    border-color: #e2e8f0;
-  }
-  .project-card .project-cover {
-    display: block;
-    width: 100%;
-    aspect-ratio: 2 / 1;
-    overflow: hidden;
-  }
-  .project-card .project-cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .project-card .project-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 1.2em 1.4em;
+    border-color: #ced4da;
   }
   .project-card h3 {
-    margin: 0 0 0.5em 0;
-    font-size: 1.1em;
+    margin: 0 0 0.4em 0;
+    font-size: 1em;
   }
   .project-card h3 a { color: #212529; text-decoration: none; }
   .project-card h3 a:hover { color: #007bff; }
+  .project-card .project-desc {
+    font-size: 0.85em;
+    margin-bottom: 0.8em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
   .project-desc {
     flex: 1;
     font-size: 0.92em;
@@ -157,23 +145,15 @@ author_profile: true
 {% endfor %}
 
 {% for category in site.data.projects.categories %}
-<h2 class="project-section-title" style="border-left-color: {{ category.color | default: '#007bff' }};"><span class="i18n-zh">{{ category.name.zh }}</span><span class="i18n-en">{{ category.name.en }}</span></h2>
+<h2 class="project-section-title"><span class="i18n-zh">{{ category.name.zh }}</span><span class="i18n-en">{{ category.name.en }}</span></h2>
 
 <div class="project-grid">
   {% for project in category.items %}
   {% unless project.featured %}
   <div class="project-card">
-    {% capture cover_url %}{% if project.image %}{{ project.image | relative_url }}{% elsif project.repo %}https://opengraph.githubassets.com/1/{{ project.repo }}{% endif %}{% endcapture %}
-    {% if cover_url != "" %}
-    <a class="project-cover" href="{{ project.link }}">
-      <img src="{{ cover_url }}" alt="{{ project.name }}" loading="lazy">
-    </a>
-    {% endif %}
-    <div class="project-body">
-      <h3><a href="{{ project.link }}">{{ project.name }}</a></h3>
-      <div class="project-desc"><span class="i18n-zh">{{ project.desc.zh }}</span><span class="i18n-en">{{ project.desc.en }}</span></div>
-      <div class="project-tags">{% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}</div>
-    </div>
+    <h3><a href="{{ project.link }}">{{ project.name }}</a></h3>
+    <div class="project-desc"><span class="i18n-zh">{{ project.desc.zh }}</span><span class="i18n-en">{{ project.desc.en }}</span></div>
+    <div class="project-tags" style="margin-top: auto;">{% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}</div>
   </div>
   {% endunless %}
   {% endfor %}
