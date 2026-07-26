@@ -9,7 +9,6 @@ future: true
 title                    : "Yeats_Liao"
 description              : "Yeats_Liao 的个人主页：Java 后端与 AI 应用开发者，专注 Spring 生态、鲲鹏/昇腾国产算力、物联网与开源技术写作。Freedom is more important than life, focus is more important than thinking."
 repository               : "yeatsliao/yeatsliao.github.io"
-google_scholar_stats_use_cdn : true
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/

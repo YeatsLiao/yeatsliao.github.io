@@ -8,67 +8,56 @@ redirect_from:
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
-
 <span class="anchor" id="about-me"></span>
 
 <header>
   <h1 class="page__title">👋 About Me</h1>
 </header>
 
+Java 后端 / AI 应用开发者，现任浙江大学湖州研究院（HIZJU）数字技术应用研究中心技术负责人。
 
-CSDN 2022 Blog Star TOP71, a high-quality creator in the Java field, CSDN blog expert, Alibaba Cloud expert blogger, Huawei Cloud Enjoyment expert.
+Software Engineer & Tech Writer — Java Backend · AI Applications · Ascend/Kunpeng Ecosystem.
 
-Excellent technical writing skills, with a CSDN blog boasting over 900K views and 40K followers, recognized as a top blogger in the Java field.
+六年技术写作：CSDN 博客专家（2022 博客之星 TOP71）、阿里云专家博主、华为云云享专家、腾讯云创作之星，CSDN 博客 90W+ 阅读、4W+ 粉丝，Java 领域优质创作者、后端开发领域专家。
+
+<p>
+  <a href="https://github.com/YeatsLiao"><img src="https://img.shields.io/github/followers/YeatsLiao?label=GitHub%20Followers&style=flat-square&logo=github" alt="GitHub Followers"></a>
+  <a href="https://yeatsliao.blog.csdn.net/"><img src="https://img.shields.io/badge/CSDN-%E5%8D%9A%E5%AE%A2%E4%B8%93%E5%AE%B6%20%C2%B7%2040K%2B%20%E7%B2%89%E4%B8%9D-fc5531?style=flat-square" alt="CSDN"></a>
+  <a href="https://developer.aliyun.com/profile/h4ged5ha4xsfs"><img src="https://img.shields.io/badge/%E9%98%BF%E9%87%8C%E4%BA%91-%E4%B8%93%E5%AE%B6%E5%8D%9A%E4%B8%BB-ff6a00?style=flat-square" alt="Aliyun Expert"></a>
+  <img src="https://img.shields.io/badge/%E5%8D%8E%E4%B8%BA%E4%BA%91-%E4%BA%91%E4%BA%AB%E4%B8%93%E5%AE%B6-c7000b?style=flat-square" alt="Huawei Cloud Expert">
+  <a href="https://developer.cloud.tencent.com/user/11176808"><img src="https://img.shields.io/badge/%E8%85%BE%E8%AE%AF%E4%BA%91-%E5%88%9B%E4%BD%9C%E4%B9%8B%E6%98%9F-00a4ff?style=flat-square" alt="Tencent Cloud"></a>
+</p>
 
 # 🔥 Technical Skills
 
-- Languages: C, Java, JavaScript, J2EE, SpringBoot, SpringMVC, SpringCloud, SpringSecurity, MyBatis, Mybatis-Plus
-- Web Technologies: JQuery, Ajax, Node.js, ES6, NPM, Babel, Webpack
-- Operating Systems: UNIX/Linux
-- Tools: Putty/SSH, Docker, Git, Nginx, Maven, Jenkins
-- Databases: MySQL, Redis, InfluxDB
-- Messaging: RabbitMQ, MQTT
-- Networking
-- Cloud Services: Huawei Cloud Elastic Cloud Server, Elastic Scaling, Container Usage
-- AI Tools: Copilot, Newbing, Stable-Diffusion
+**核心专长**：Java 后端架构 · AI 应用开发 · 物联网
 
-<!-- # 📝 Publications 
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
-
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
+- **后端**：Java、Spring Boot / MVC / Cloud / Security、MyBatis / MyBatis-Plus、MySQL、Redis、InfluxDB、RabbitMQ / MQTT
+- **AI / 国产算力**：MindSpore、昇腾（Ascend）、鲲鹏（Kunpeng）性能调优、LLM 应用与 Agent 开发
+- **工程化**：Docker、Nginx、Jenkins、Maven、Git、UNIX/Linux
+- **前端 / Web**：JavaScript (ES6)、Node.js、jQuery / Ajax、NPM / Babel / Webpack
+- **云服务**：华为云弹性云服务器、弹性伸缩、容器使用；阿里云弹性计算
 
 # 🎖 Honors and Awards
-- *2023 - 2024*, Alibaba Cloud Elastic Computing Cloud series certification.
-- *2022 - 2023*, Huawei Cloud HCCDA-AI certification; Tencent Cloud Architecture Engineer (TCA) certification; Youth Training Camp X Byte Front end Training Camp&Backend Training Camp.
-- *2021 - 2022*, National Endeavor Fellowship; Third prize in the 25th Runhua Award Program Design Competition.
-- *2020 - 2021*, National Endeavor Fellowship; Alibaba Certified Digital Management Professional Qualification Certificate.
-- *2019 - 2020*, School scholarship.
+
+**社区荣誉**
+
+- CSDN 博客专家 · 2022 博客之星 TOP71 · Java 领域优质创作者 · 后端开发领域专家
+- 阿里云专家博主 · 华为云云享专家 · 腾讯云创作之星 · Trae Expert
+
+**证书与奖项**
+
+- *2023 - 2024*, 阿里云弹性计算 Clouder 系列认证
+- *2022 - 2023*, 华为云 HCCDA-AI 认证；腾讯云架构工程师（TCA）认证；青训营 X 字节前端训练营 & 后端训练营
+- *2021 - 2022*, 国家励志奖学金；第 25 届润华奖程序设计竞赛三等奖
+- *2020 - 2021*, 国家励志奖学金；阿里巴巴数字化管理专业认证
+- *2019 - 2020*, 校级奖学金
 
 # 📖 Educations
 
-- *2019.09 - 2023.06*,  [JIFT](https://gjxy-en.jift.edu.cn/index.htm), Bachelor's Degree in Internet of Things Engineering at Jiangxi Institute of Fashion Technology (JIFT), GPA 3.39/4.00, ranked 1st out of 39. 
-
-<!-- # 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
+- *2019.09 - 2023.06*, [江西服装学院（JIFT）](https://gjxy-en.jift.edu.cn/index.htm)，物联网工程 本科，GPA 3.39/4.00，专业排名 1/39
 
 # 💻 Work Experience
-- *2023.06 - now*, [HIZJU](http://hzi.zju.edu.cn/site/team), Huzhou Institute of Zhejiang University (Digital Technology Application Research Center) Software Development Engineer.
-- *2022.12 - 2023.06*, [Aheadsoft](http://www.aheadsoft.com.cn/), Aheadsoft (Software R&D Center)  Software Development Engineer.
+
+- *2023.06 - now*, [浙江大学湖州研究院（HIZJU）](http://hzi.zju.edu.cn/site/team)，数字技术应用研究中心，软件开发工程师 → 技术负责人
+- *2022.12 - 2023.06*, [Aheadsoft](http://www.aheadsoft.com.cn/)，软件研发中心，软件开发工程师
