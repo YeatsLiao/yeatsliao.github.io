@@ -36,23 +36,11 @@ redirect_from:
 
 # Honors and Awards
 
-**<span class="i18n-zh">社区荣誉</span><span class="i18n-en">Community Honors</span>**
-
-<ul>
-{% for honor in site.data.honors.community %}
-  <li><span class="i18n-zh">{{ honor.zh }}</span><span class="i18n-en">{{ honor.en }}</span></li>
-{% endfor %}
-</ul>
-
-**<span class="i18n-zh">证书与奖项</span><span class="i18n-en">Certificates & Awards</span>**
-
-<ul>
-{% for award in site.data.honors.awards %}
-  <li><em>{{ award.period }}</em>, <span class="i18n-zh">{{ award.zh }}</span><span class="i18n-en">{{ award.en }}</span>
-  {% if award.image %}<br><img src="{{ award.image | relative_url }}" alt="{{ award.zh }}" loading="lazy" style="max-width: 320px; border-radius: 8px; margin-top: 0.5em;">{% endif %}
-  </li>
-{% endfor %}
-</ul>
+<p>
+  <span class="i18n-zh">CSDN 博客专家 · 阿里云专家博主 · 华为云云享专家 · 腾讯云创作之星，另有云厂商认证与奖学金若干。</span>
+  <span class="i18n-en">CSDN Blog Expert · Alibaba Cloud Expert Blogger · Huawei Cloud MVP · Tencent Cloud Creation Star, plus cloud vendor certifications and scholarships.</span>
+  <a href="{{ '/honors/' | relative_url }}"><span class="i18n-zh">查看荣誉墙 →</span><span class="i18n-en">View the honor wall →</span></a>
+</p>
 
 # Educations
 
