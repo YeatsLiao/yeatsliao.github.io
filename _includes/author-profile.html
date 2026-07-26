@@ -43,6 +43,15 @@
       {% if author.yuque %}
       <li><a href="{{ author.yuque }}"><i class="fab fa-fw fa-pagelines" aria-hidden="true"></i> YuQue</a></li>
     {% endif %}
+      {% if author.juejin %}
+      <li><a href="{{ author.juejin }}"><i class="fas fa-fw fa-gem" aria-hidden="true"></i> Juejin</a></li>
+      {% endif %}
+      {% if author.aliyun %}
+      <li><a href="{{ author.aliyun }}"><i class="fas fa-fw fa-cloud" aria-hidden="true"></i> Aliyun</a></li>
+      {% endif %}
+      {% if author.tencentcloud %}
+      <li><a href="{{ author.tencentcloud }}"><i class="fas fa-fw fa-cloud-upload-alt" aria-hidden="true"></i> Tencent Cloud</a></li>
+      {% endif %}
       {% if author.twitter %}
         <li><a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
       {% endif %}

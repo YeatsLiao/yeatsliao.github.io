@@ -7,7 +7,7 @@
 # Site Settings
 future: true
 title                    : "Yeats_Liao"
-description              : "Freedom is more important than life, focus is more important than thinking. "
+description              : "Yeats_Liao 的个人主页：Java 后端与 AI 应用开发者，专注 Spring 生态、鲲鹏/昇腾国产算力、物联网与开源技术写作。Freedom is more important than life, focus is more important than thinking."
 repository               : "yeatsliao/yeatsliao.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -59,6 +59,9 @@ author:
   wikipedia        :
   csdn             : https://yeatsliao.blog.csdn.net/
   yuque            : https://www.yuque.com/yeats_liao
+  juejin           : https://juejin.cn/user/2124673209605054
+  aliyun           : https://developer.aliyun.com/profile/h4ged5ha4xsfs
+  tencentcloud     : https://developer.cloud.tencent.com/user/11176808
 
 
 # Reading Files
