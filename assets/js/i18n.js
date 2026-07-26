@@ -1,6 +1,9 @@
 /* 中英文切换逻辑：语言偏好持久化在 localStorage（key: site-lang，值 zh / en，默认 zh） */
+/* 英文翻译尚未完成，暂时锁定中文；翻译就绪后把 LANG_LOCKED 改为 false 即可恢复切换 */
+var LANG_LOCKED = true;
 (function () {
   function currentLang() {
+    if (LANG_LOCKED) return 'zh';
     try {
       return localStorage.getItem('site-lang') || 'zh';
     } catch (e) {
@@ -22,6 +25,7 @@
   }
 
   window.toggleSiteLang = function () {
+    if (LANG_LOCKED) return;
     var next = currentLang() === 'en' ? 'zh' : 'en';
     try {
       localStorage.setItem('site-lang', next);

@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /honors/
-title: "Honors"
+title: "荣誉"
 author_profile: true
 ---
 
@@ -56,10 +56,10 @@ author_profile: true
 </style>
 
 <header>
-  <h1 class="page__title">Honors</h1>
+  <h1 class="page__title">荣誉</h1>
 </header>
 
-# Community Honors
+# 社区荣誉
 
 <ul>
 {% for honor in site.data.honors.community %}
@@ -67,7 +67,7 @@ author_profile: true
 {% endfor %}
 </ul>
 
-# Certificates & Awards
+# 证书与奖项
 
 <div class="cert-wall">
   {% for award in site.data.honors.awards %}

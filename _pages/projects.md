@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /projects/
-title: "Projects"
+title: "项目"
 author_profile: true
 ---
 
@@ -112,7 +112,7 @@ author_profile: true
 </style>
 
 <header>
-  <h1 class="page__title">Projects</h1>
+  <h1 class="page__title">项目</h1>
 </header>
 
 <p>

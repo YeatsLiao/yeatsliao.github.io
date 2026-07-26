@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /activities/
-title: "Activities"
+title: "活动"
 author_profile: true
 ---
 
@@ -69,7 +69,7 @@ author_profile: true
 </style>
 
 <header>
-  <h1 class="page__title">Activities</h1>
+  <h1 class="page__title">活动</h1>
 </header>
 
 <p>

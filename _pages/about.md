@@ -11,7 +11,7 @@ redirect_from:
 <span class="anchor" id="about-me"></span>
 
 <header>
-  <h1 class="page__title">About Me</h1>
+  <h1 class="page__title">关于我</h1>
 </header>
 
 {% for para in site.data.profile.intro %}
@@ -24,7 +24,7 @@ redirect_from:
 {% endfor %}
 </p>
 
-# Technical Skills
+# 技术能力
 
 **<span class="i18n-zh">{{ site.data.skills.headline.zh }}</span><span class="i18n-en">{{ site.data.skills.headline.en }}</span>**
 
@@ -34,7 +34,7 @@ redirect_from:
 {% endfor %}
 </ul>
 
-# Honors and Awards
+# 荣誉与奖项
 
 <p>
   <span class="i18n-zh">CSDN 博客专家 · 阿里云专家博主 · 华为云云享专家 · 腾讯云创作之星，另有云厂商认证与奖学金若干。</span>
@@ -42,7 +42,7 @@ redirect_from:
   <a href="{{ '/honors/' | relative_url }}"><span class="i18n-zh">查看荣誉墙 →</span><span class="i18n-en">View the honor wall →</span></a>
 </p>
 
-# Educations
+# 教育经历
 
 <ul>
 {% for edu in site.data.profile.education %}
@@ -50,7 +50,7 @@ redirect_from:
 {% endfor %}
 </ul>
 
-# Work Experience
+# 工作经历
 
 <ul>
 {% for job in site.data.profile.experience %}

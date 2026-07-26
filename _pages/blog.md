@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: "Blog"
+title: "博客"
 author_profile: true
 ---
 
