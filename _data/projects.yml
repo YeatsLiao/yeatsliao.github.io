@@ -1,37 +1,46 @@
 # 开源项目数据
 # 新增项目：在 categories 下对应分类的 items 中追加条目即可，页面自动渲染
-# 字段说明：
-#   name:  项目名（必填）
-#   link:  仓库/主页链接（必填）
-#   desc:  一句话描述，zh/en 双语（必填）
-#   tags:  技术栈标签列表（必填，语言中立的技术名词可只写一份）
-#   image: 项目截图，放 images/projects/ 下，命名 {项目名}-cover.webp（选填）
+# 分类字段：id、name（zh/en）、color（分类色条颜色）
+# 项目字段说明：
+#   name:     项目名（必填）
+#   repo:     GitHub 仓库（用户名/仓库名，无 image 时自动用 GitHub OpenGraph 图做封面兜底）
+#   link:     仓库/主页链接（必填）
+#   desc:     一句话描述，zh/en 双语（必填）
+#   tags:     技术栈标签列表（必填）
+#   featured: true 时置顶到"精选项目"左图右文大卡区（建议保持 2-3 个）
+#   image:    项目截图，放 images/projects/ 下，命名 {项目名}-cover.webp（选填，优先于 OpenGraph 兜底）
 
 categories:
   - id: ai
+    color: "#7c3aed"
     name:
       zh: AI 应用
       en: AI Applications
     items:
       - name: emotion-sky
+        repo: YeatsLiao/emotion-sky
+        featured: true
         link: https://github.com/YeatsLiao/emotion-sky
         desc:
           zh: 情绪记录与可视化 Web 应用：将用户情绪映射为动态天气场景，支持城市情绪地图和趋势分析。
           en: "An emotion journaling and visualization web app: maps user emotions to dynamic weather scenes, with city emotion maps and trend analysis."
         tags: [React, Vite, Visualization]
       - name: xmov-cultural-guardian
+        repo: YeatsLiao/xmov-cultural-guardian
         link: https://github.com/YeatsLiao/xmov-cultural-guardian
         desc:
           zh: 基于魔珐星云 SDK 的文化遗产数字守护者：数字人实时讲解与交互问答 Demo。
           en: "Digital guardian for cultural heritage built on the Xmov SDK: a demo of real-time digital-human narration and interactive Q&A."
         tags: [Digital Human, SDK, Interactive Q&A]
       - name: AI Agent Skill 系列
+        repo: YeatsLiao/ascend-blog-skill
         link: https://github.com/YeatsLiao/ascend-blog-skill
         desc:
           zh: 面向 AI 编码智能体的技能封装：昇腾/鲲鹏技术博客创作（ascend-blog-skill、kunpeng-blog-skill）、技术写作（yeats-tech-skill）与日记（yeats-diary-skill）等。
           en: "Skill packages for AI coding agents: Ascend/Kunpeng tech blog writing (ascend-blog-skill, kunpeng-blog-skill), technical writing (yeats-tech-skill), journaling (yeats-diary-skill), and more."
         tags: [Python, Agent Skill, AI Writing]
       - name: mindnlp（社区贡献）
+        repo: YeatsLiao/mindnlp
         link: https://github.com/YeatsLiao/mindnlp
         desc:
           zh: 基于 MindSpore 的 NLP/LLM 框架，兼容 HuggingFace 模型与数据集，参与社区代码贡献。
@@ -39,17 +48,21 @@ categories:
         tags: [MindSpore, NLP, Open Source]
 
   - id: learning
+    color: "#007bff"
     name:
       zh: 交互式学习平台
       en: Interactive Learning Platforms
     items:
       - name: design-patterns-23
+        repo: YeatsLiao/design-patterns-23
+        featured: true
         link: https://github.com/YeatsLiao/design-patterns-23
         desc:
           zh: 为解决设计模式"看得懂记不住"的学习痛点，用 React 构建 23 种 GoF 设计模式的可视化交互演示与代码对照平台。
           en: An interactive React platform that teaches all 23 GoF design patterns through visual demonstrations and side-by-side code comparisons.
         tags: [React, TypeScript, Design Patterns]
       - name: java-handson-lab
+        repo: YeatsLiao/java-handson-lab
         link: https://github.com/YeatsLiao/java-handson-lab
         desc:
           zh: Java 交互式可视化学习平台：通过 Web 图形界面与生动动画降低 Java 学习曲线。
@@ -57,29 +70,35 @@ categories:
         tags: [TypeScript, Java Teaching, Animation]
 
   - id: docs
+    color: "#0f766e"
     name:
       zh: 开源文档与工具
       en: Open Source Docs & Tools
     items:
       - name: rxtx-docs-cn
+        repo: YeatsLiao/rxtx-docs-cn
+        featured: true
         link: https://github.com/YeatsLiao/rxtx-docs-cn
         desc:
           zh: RXTX 中文文档：为 Java 生态经典的跨平台串口/并口通信库系统性翻译整理中文文档，GitHub Pages 在线阅读。
           en: "Chinese documentation for RXTX: a systematic translation of the classic cross-platform serial/parallel port library for Java, readable online via GitHub Pages."
         tags: [Java, Serial Port, Documentation]
       - name: huzhou-playbox
+        repo: YeatsLiao/huzhou-playbox
         link: https://github.com/YeatsLiao/huzhou-playbox
         desc:
           zh: demowall 活动互动应用：以轻量小游戏展示湖州文化特色，兼顾用户参与和休闲娱乐。
           en: "An interactive app for the demowall event: lightweight mini-games showcasing Huzhou's culture while engaging and entertaining users."
         tags: [TypeScript, Interactive, Culture]
       - name: personal-study-notes
+        repo: YeatsLiao/personal-study-notes
         link: https://github.com/YeatsLiao/personal-study-notes
         desc:
           zh: 个人学习笔记仓库：Java、后端与工程化方向的系统性学习记录。
           en: "Personal study notes: systematic learning records on Java, backend development, and engineering practices."
         tags: [Notes, Knowledge Base]
       - name: perler-beads
+        repo: YeatsLiao/perler-beads
         link: https://github.com/YeatsLiao/perler-beads
         desc:
           zh: 拼拼豆豆：像素画风格的创意小工具。
