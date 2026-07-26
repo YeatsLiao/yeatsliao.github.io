@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="768" viewBox="0 0 1024 768">
+  <rect width="1024" height="768" fill="#f2f4f6"/>
+  <rect x="72" y="64" width="880" height="640" fill="#ffffff" stroke="#d8dde3" stroke-width="2"/>
+  <path d="M472 180 h80 v130 l-40 -26 l-40 26 z" fill="none" stroke="#c4cad2" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="512" cy="150" r="34" fill="none" stroke="#c4cad2" stroke-width="6"/>
+  <rect x="332" y="420" width="360" height="18" rx="9" fill="#e2e6ea"/>
+  <rect x="382" y="466" width="260" height="14" rx="7" fill="#eceff2"/>
+  <rect x="432" y="508" width="160" height="14" rx="7" fill="#eceff2"/>
+  <text x="512" y="646" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#b6bdc6">Certificate Sample 3</text>
+</svg>
