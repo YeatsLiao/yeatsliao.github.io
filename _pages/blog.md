@@ -5,39 +5,119 @@ title: "博客"
 author_profile: true
 ---
 
-<div class="archive" style="margin-top: 1em;">
-  <div class="timeline" style="position: relative; padding-left: 20px;">
-    <!-- 贯穿全剧的时间轴主线 -->
-    <div style="position: absolute; left: 6px; top: 0; bottom: 0; width: 2px; background-color: #e9ecef; z-index: 1;"></div>
-    
-    {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-    {% for year in postsByYear %}
-      <div class="timeline-year" style="position: relative; margin-top: 2em; margin-bottom: 1em;">
-        <!-- 年份圆点 -->
-        <span style="position: absolute; left: -19px; top: 8px; width: 12px; height: 12px; background-color: #fff; border: 3px solid #007bff; border-radius: 50%; z-index: 2;"></span>
-        <h2 id="{{ year.name }}" class="archive__subtitle" style="margin: 0; color: #007bff; font-size: 1.4em; font-weight: 600; padding-left: 10px;">{{ year.name }}</h2>
-      </div>
-      
-      <div class="timeline-items" style="padding-left: 10px; padding-bottom: 10px;">
-      {% for post in year.items %}
-        <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork" style="margin-bottom: 2em; position: relative; background: #fff; padding: 1.5em; border-radius: 12px; border: 1px solid #f1f3f5; box-shadow: 0 2px 8px rgba(0,0,0,0.02); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.06)'; this.style.borderColor='#e2e8f0';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f3f5';">
-          
-          <!-- 文章时间点 -->
-          <span style="position: absolute; left: -34px; top: 28px; width: 8px; height: 8px; background-color: #adb5bd; border-radius: 50%; z-index: 2; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#007bff';" onmouseout="this.style.backgroundColor='#adb5bd';"></span>
-          
-          <h3 class="archive__item-title" itemprop="headline" style="margin: 0 0 0.4em 0; font-size: 1.25em; font-weight: 600;">
-            <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #212529; transition: color 0.2s;" onmouseover="this.style.color='#007bff';" onmouseout="this.style.color='#212529';">{{ post.title }}</a>
-          </h3>
-          <p class="page__meta" style="color: #6c757d; font-size: 0.85em; margin: 0 0 0.8em 0; display: flex; align-items: center; gap: 5px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d" }}</time>
-          </p>
-          <div class="archive__item-excerpt" itemprop="description" style="font-size: 0.95em; color: #495057; line-height: 1.6; margin: 0;">
-            {{ post.excerpt | markdownify | strip_html | truncate: 160 }}
-          </div>
-        </article>
-      {% endfor %}
-      </div>
-    {% endfor %}
+<style>
+  /* 年份导航条（与活动页同款） */
+  .year-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 1em 0 0.5em;
+  }
+  .year-nav a {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    border: 1px solid #e9ecef;
+    background: #fff;
+    color: #495057;
+    font-size: 0.85em;
+    text-decoration: none !important;
+  }
+  .year-nav a:hover {
+    border-color: #007bff;
+    color: #007bff;
+  }
+  .year-nav a .year-count {
+    color: #adb5bd;
+    font-size: 0.85em;
+    margin-left: 4px;
+  }
+  .year-heading {
+    margin: 1.6em 0 0.2em;
+    color: #007bff;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 0.3em;
+  }
+  /* 紧凑文章行 */
+  .post-item {
+    display: flex;
+    gap: 14px;
+    padding: 0.8em 0;
+    border-bottom: 1px solid #f1f3f5;
+  }
+  .post-item:last-child { border-bottom: none; }
+  .cal-block {
+    flex: 0 0 46px;
+    align-self: flex-start;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+    background: #fff;
+  }
+  .cal-block .cal-month {
+    display: block;
+    background: #007bff;
+    color: #fff;
+    font-size: 0.65em;
+    font-weight: 600;
+    padding: 1px 0;
+  }
+  .cal-block .cal-day {
+    display: block;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #212529;
+    padding: 2px 0;
+    line-height: 1.2;
+  }
+  .post-main { flex: 1; min-width: 0; }
+  .post-title {
+    margin: 0 0 0.2em 0;
+    font-size: 1em;
+    font-weight: 600;
+  }
+  .post-title a { color: #212529; text-decoration: none; }
+  .post-title a:hover { color: #007bff; }
+  .post-excerpt {
+    font-size: 0.85em;
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
+
+<header>
+  <h1 class="page__title">博客</h1>
+</header>
+
+{% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+<div class="year-nav">
+  {% for year in postsByYear %}
+  <a href="#{{ year.name }}">{{ year.name }}<span class="year-count">{{ year.items | size }}</span></a>
+  {% endfor %}
+</div>
+
+{% for year in postsByYear %}
+<h2 id="{{ year.name }}" class="year-heading">{{ year.name }}</h2>
+
+{% for post in year.items %}
+<div class="post-item">
+  <time class="cal-block" datetime="{{ post.date | date_to_xmlschema }}">
+    <span class="cal-month">{{ post.date | date: "%-m月" }}</span>
+    <span class="cal-day">{{ post.date | date: "%-d" }}</span>
+  </time>
+  <div class="post-main">
+    <h3 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p class="post-excerpt">{{ post.excerpt | markdownify | strip_html | truncate: 120 }}</p>
   </div>
 </div>
+{% endfor %}
+{% endfor %}

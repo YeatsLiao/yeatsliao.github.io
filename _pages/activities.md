@@ -15,57 +15,98 @@ author_profile: true
   }
   .year-nav a {
     display: inline-block;
-    padding: 4px 14px;
+    padding: 3px 12px;
     border-radius: 20px;
     border: 1px solid #e9ecef;
     background: #fff;
     color: #495057;
     font-size: 0.85em;
-    font-weight: 500;
     text-decoration: none !important;
-    transition: all 0.2s ease;
   }
   .year-nav a:hover {
-    border-color: #28a745;
-    color: #28a745;
+    border-color: #007bff;
+    color: #007bff;
   }
   .year-nav a .year-count {
     color: #adb5bd;
     font-size: 0.85em;
     margin-left: 4px;
   }
+  .year-heading {
+    margin: 1.6em 0 0.2em;
+    color: #007bff;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 0.3em;
+  }
+  /* 紧凑活动行 */
+  .activity-item {
+    display: flex;
+    gap: 14px;
+    padding: 0.8em 0;
+    border-bottom: 1px solid #f1f3f5;
+  }
+  .activity-item:last-child { border-bottom: none; }
   /* 日历撕页日期块 */
   .cal-block {
-    flex: 0 0 56px;
+    flex: 0 0 46px;
     align-self: flex-start;
     border: 1px solid #e9ecef;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     text-align: center;
     background: #fff;
   }
   .cal-block .cal-month {
     display: block;
-    background: #28a745;
+    background: #007bff;
     color: #fff;
-    font-size: 0.7em;
+    font-size: 0.65em;
     font-weight: 600;
-    padding: 2px 0;
-    letter-spacing: 0.5px;
+    padding: 1px 0;
   }
   .cal-block .cal-day {
     display: block;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 700;
     color: #212529;
-    padding: 4px 0;
+    padding: 2px 0;
     line-height: 1.2;
   }
-  .activity-row {
+  .activity-main { flex: 1; min-width: 0; }
+  .activity-title {
+    margin: 0 0 0.2em 0;
+    font-size: 1em;
+    font-weight: 600;
     display: flex;
-    gap: 16px;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
   }
-  .activity-row .activity-main { flex: 1; min-width: 0; }
+  .activity-title a { color: #212529; text-decoration: none; }
+  .activity-title a:hover { color: #007bff; }
+  .activity-role {
+    font-size: 0.7em;
+    font-weight: 500;
+    padding: 1px 10px;
+    border-radius: 20px;
+    background: #e7f1ff;
+    color: #007bff;
+    white-space: nowrap;
+  }
+  .activity-desc {
+    font-size: 0.85em;
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .activity-photo {
+    max-width: 280px;
+    border-radius: 6px;
+    margin-top: 0.5em;
+    display: block;
+  }
 </style>
 
 <header>
@@ -86,56 +127,33 @@ author_profile: true
   {% endfor %}
 </div>
 
-<div class="archive" style="margin-top: 1em;">
-  <div class="timeline" style="position: relative; padding-left: 20px;">
-    <!-- 时间轴主线 -->
-    <div style="position: absolute; left: 6px; top: 0; bottom: 0; width: 2px; background-color: #e9ecef; z-index: 1;"></div>
+{% for year in activitiesByYear %}
+<h2 id="{{ year.name }}" class="year-heading">{{ year.name }}</h2>
 
-    {% for year in activitiesByYear %}
-      <div class="timeline-year" style="position: relative; margin-top: 2em; margin-bottom: 1em;">
-        <!-- 年份圆点 -->
-        <span style="position: absolute; left: -19px; top: 8px; width: 12px; height: 12px; background-color: #fff; border: 3px solid #28a745; border-radius: 50%; z-index: 2;"></span>
-        <h2 id="{{ year.name }}" class="archive__subtitle" style="margin: 0; color: #28a745; font-size: 1.4em; font-weight: 600; padding-left: 10px;">{{ year.name }}</h2>
-      </div>
-
-      <div class="timeline-items" style="padding-left: 10px; padding-bottom: 10px;">
-      {% for activity in year.items %}
-        <article class="archive__item" style="margin-bottom: 2em; position: relative; background: #fff; padding: 1.5em; border-radius: 12px; border: 1px solid #f1f3f5; box-shadow: 0 2px 8px rgba(0,0,0,0.02); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.06)'; this.style.borderColor='#e2e8f0';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f3f5';">
-
-          <!-- 活动时间点 -->
-          <span style="position: absolute; left: -34px; top: 28px; width: 8px; height: 8px; background-color: #adb5bd; border-radius: 50%; z-index: 2;"></span>
-
-          <div class="activity-row">
-            <!-- 日历撕页日期块 -->
-            <time class="cal-block" datetime="{{ activity.date }}">
-              <span class="cal-month"><span class="i18n-zh">{{ activity.date | date: "%-m月" }}</span><span class="i18n-en">{{ activity.date | date: "%b" }}</span></span>
-              <span class="cal-day">{{ activity.date | date: "%-d" }}</span>
-            </time>
-
-            <div class="activity-main">
-              <h3 class="archive__item-title" style="margin: 0 0 0.6em 0; font-size: 1.2em; font-weight: 600; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                {% if activity.link %}
-                  <a href="{{ activity.link }}" style="text-decoration: none; color: #212529;" onmouseover="this.style.color='#28a745';" onmouseout="this.style.color='#212529';"><span class="i18n-zh">{{ activity.title.zh }}</span><span class="i18n-en">{{ activity.title.en }}</span></a>
-                {% else %}
-                  <span style="color: #212529;"><span class="i18n-zh">{{ activity.title.zh }}</span><span class="i18n-en">{{ activity.title.en }}</span></span>
-                {% endif %}
-                {% if activity.role %}
-                  <span style="font-size: 0.65em; font-weight: 500; padding: 2px 12px; border-radius: 20px; background: #e7f5ec; color: #28a745;"><span class="i18n-zh">{{ activity.role.zh }}</span><span class="i18n-en">{{ activity.role.en }}</span></span>
-                {% endif %}
-              </h3>
-              {% if activity.desc %}
-              <div class="archive__item-excerpt" style="font-size: 0.95em; color: #495057; line-height: 1.6; margin: 0;"><span class="i18n-zh">{{ activity.desc.zh }}</span><span class="i18n-en">{{ activity.desc.en }}</span></div>
-              {% endif %}
-              {% if activity.image %}
-              <div style="margin-top: 1em;">
-                <img src="{{ activity.image | relative_url }}" alt="{{ activity.title.zh }}" loading="lazy" style="max-width: 100%; border-radius: 8px;">
-              </div>
-              {% endif %}
-            </div>
-          </div>
-        </article>
-      {% endfor %}
-      </div>
-    {% endfor %}
+{% for activity in year.items %}
+<div class="activity-item">
+  <time class="cal-block" datetime="{{ activity.date }}">
+    <span class="cal-month"><span class="i18n-zh">{{ activity.date | date: "%-m月" }}</span><span class="i18n-en">{{ activity.date | date: "%b" }}</span></span>
+    <span class="cal-day">{{ activity.date | date: "%-d" }}</span>
+  </time>
+  <div class="activity-main">
+    <h3 class="activity-title">
+      {% if activity.link %}
+        <a href="{{ activity.link }}"><span class="i18n-zh">{{ activity.title.zh }}</span><span class="i18n-en">{{ activity.title.en }}</span></a>
+      {% else %}
+        <span><span class="i18n-zh">{{ activity.title.zh }}</span><span class="i18n-en">{{ activity.title.en }}</span></span>
+      {% endif %}
+      {% if activity.role %}
+        <span class="activity-role"><span class="i18n-zh">{{ activity.role.zh }}</span><span class="i18n-en">{{ activity.role.en }}</span></span>
+      {% endif %}
+    </h3>
+    {% if activity.desc %}
+    <p class="activity-desc"><span class="i18n-zh">{{ activity.desc.zh }}</span><span class="i18n-en">{{ activity.desc.en }}</span></p>
+    {% endif %}
+    {% if activity.image %}
+    <img class="activity-photo" src="{{ activity.image | relative_url }}" alt="{{ activity.title.zh }}" loading="lazy">
+    {% endif %}
   </div>
 </div>
+{% endfor %}
+{% endfor %}
