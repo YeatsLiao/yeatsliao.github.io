@@ -52,6 +52,19 @@
       {% if author.tencentcloud %}
       <li><a href="{{ author.tencentcloud }}"><i class="fas fa-fw fa-cloud-upload-alt" aria-hidden="true"></i> Tencent Cloud</a></li>
       {% endif %}
+      {% if author.xiaohongshu %}
+      <li><a href="{{ author.xiaohongshu }}"><i class="fas fa-fw fa-book" aria-hidden="true"></i> 小红书</a></li>
+      {% endif %}
+      {% if author.wechat_qrcode %}
+      <li class="wechat-qr-item" style="position: relative;">
+        <a href="{{ site.baseurl | default: '' }}/{{ author.wechat_qrcode }}" target="_blank"><i class="fab fa-fw fa-weixin" aria-hidden="true"></i> 公众号 · {{ author.wechat_official }}</a>
+        <img class="wechat-qr-pop" src="{{ site.baseurl | default: '' }}/{{ author.wechat_qrcode }}" alt="公众号{{ author.wechat_official }}二维码" />
+      </li>
+      <style>
+        .wechat-qr-pop { display: none; position: absolute; left: 0; bottom: 100%; width: 140px; z-index: 20; background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; padding: 4px; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+        .wechat-qr-item:hover .wechat-qr-pop { display: block; }
+      </style>
+      {% endif %}
       {% if author.twitter %}
         <li><a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
       {% endif %}
