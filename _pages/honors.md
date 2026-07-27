@@ -53,6 +53,14 @@ author_profile: true
     font-size: 0.8em;
     color: #868e96;
   }
+  .cert-group-heading {
+    font-size: 1.05em;
+    font-weight: 600;
+    color: #007bff;
+    margin: 1.6em 0 0.2em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #e9ecef;
+  }
 </style>
 
 <header>
@@ -69,8 +77,10 @@ author_profile: true
 
 # 证书与奖项
 
+{% for group in site.data.honors.award_groups %}
+<h3 class="cert-group-heading"><span class="i18n-zh">{{ group.name.zh }}</span><span class="i18n-en">{{ group.name.en }}</span></h3>
 <div class="cert-wall">
-  {% for award in site.data.honors.awards %}
+  {% for award in group.items %}
   <div class="cert-card">
     {% if award.image %}
     <a class="cert-photo image-popup" href="{{ award.image | relative_url }}" title="{{ award.name.zh }}">
@@ -84,3 +94,4 @@ author_profile: true
   </div>
   {% endfor %}
 </div>
+{% endfor %}
