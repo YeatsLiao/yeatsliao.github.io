@@ -26,8 +26,6 @@ redirect_from:
 
 # 技术能力
 
-**<span class="i18n-zh">{{ site.data.skills.headline.zh }}</span><span class="i18n-en">{{ site.data.skills.headline.en }}</span>**
-
 <ul>
 {% for group in site.data.skills.groups %}
   <li><strong><span class="i18n-zh">{{ group.name.zh }}</span><span class="i18n-en">{{ group.name.en }}</span></strong>：{{ group.items }}</li>

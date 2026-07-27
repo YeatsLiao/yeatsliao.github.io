@@ -1,9 +1,5 @@
 # 技术技能数据
-# 增删技能只需编辑此文件：headline 为核心专长，groups 为分组技能清单
-
-headline:
-  zh: "核心专长：Java 后端架构 · AI 应用开发 · 物联网"
-  en: "Core Expertise: Java Backend Architecture · AI Application Development · IoT"
+# 增删技能只需编辑此文件：groups 为分组技能清单
 
 groups:
   - name:
