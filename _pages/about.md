@@ -37,8 +37,8 @@ redirect_from:
 # 荣誉与奖项
 
 <p>
-  <span class="i18n-zh">CSDN 博客专家 · 阿里云专家博主 · 华为云云享专家 · 腾讯云创作之星，另有云厂商认证与奖学金若干。</span>
-  <span class="i18n-en">CSDN Blog Expert · Alibaba Cloud Expert Blogger · Huawei Cloud MVP · Tencent Cloud Creation Star, plus cloud vendor certifications and scholarships.</span>
+  <span class="i18n-zh">云厂商与开发者社区认证证书 40+ 项，另有国家励志奖学金等奖项。</span>
+  <span class="i18n-en">40+ certifications from cloud vendors and developer communities, plus awards including the National Endeavor Fellowship.</span>
   <a href="{{ '/honors/' | relative_url }}"><span class="i18n-zh">查看荣誉墙 →</span><span class="i18n-en">View the honor wall →</span></a>
 </p>
 
