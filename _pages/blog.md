@@ -91,11 +91,65 @@ author_profile: true
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+  /* CSDN 精选旧文 */
+  .featured-box {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.9em 1.1em;
+    margin: 1.2em 0 0.4em;
+    background: #fafbfc;
+  }
+  .featured-box h2 {
+    margin: 0 0 0.5em;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #495057;
+  }
+  .featured-box h2 a { color: #007bff; text-decoration: none; font-weight: 400; font-size: 0.85em; }
+  .featured-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 18px;
+  }
+  .featured-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 3px 0;
+    font-size: 0.85em;
+    min-width: 0;
+  }
+  .featured-list a {
+    color: #212529;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .featured-list a:hover { color: #007bff; }
+  .featured-views { color: #adb5bd; flex-shrink: 0; }
+  @media (max-width: 600px) { .featured-list { grid-template-columns: 1fr; } }
 </style>
 
 <header>
   <h1 class="page__title">博客</h1>
 </header>
+
+{% if site.data.featured_posts.posts and site.data.featured_posts.posts.size > 0 %}
+<div class="featured-box">
+  <h2><span class="i18n-zh">精选旧文 · CSDN</span><span class="i18n-en">Featured on CSDN</span>
+    <a href="https://yeatsliao.blog.csdn.net/" target="_blank" rel="noopener"><span class="i18n-zh">更多 →</span><span class="i18n-en">More →</span></a>
+  </h2>
+  <ul class="featured-list">
+    {% for fp in site.data.featured_posts.posts %}
+    <li><a href="{{ fp.link }}" target="_blank" rel="noopener">{{ fp.title }}</a><span class="featured-views">{{ fp.views }} <span class="i18n-zh">阅读</span><span class="i18n-en">views</span></span></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
 
 {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 

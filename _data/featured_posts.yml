@@ -1,0 +1,27 @@
+# CSDN 精选旧文（按阅读量取自 CSDN 主页，展示在博客页顶部）
+# 增删条目只需编辑此文件：views 为展示用阅读量文本，link 为 CSDN 文章地址
+posts:
+  - title: "中文乱码处理 - Java Web"
+    views: 16.5W
+    link: https://yeatsliao.blog.csdn.net/article/details/127233351
+  - title: "CodeBlocks-20.03 下载安装及中文教程"
+    views: 10.1W
+    link: https://yeatsliao.blog.csdn.net/article/details/115710608
+  - title: "Ubuntu Server 20.04 LTS 下载及安装教程"
+    views: 4.6W
+    link: https://yeatsliao.blog.csdn.net/article/details/116562487
+  - title: "DTO 和 VO 的区别及使用场景详解"
+    views: 3.3W
+    link: https://yeatsliao.blog.csdn.net/article/details/134726394
+  - title: "Java Lambda 表达式"
+    views: 3.2W
+    link: https://yeatsliao.blog.csdn.net/article/details/124183519
+  - title: "小狼毫 Rime 输入法简单配置指南"
+    views: 2.5W
+    link: https://yeatsliao.blog.csdn.net/article/details/114411457
+  - title: "基于 STM32 的光敏传感器数据采集系统"
+    views: 2.3W
+    link: https://yeatsliao.blog.csdn.net/article/details/127159539
+  - title: "Windows 上安装 EMQX 作为 MQTT 服务器及配置 MQTTX 客户端"
+    views: 2W
+    link: https://yeatsliao.blog.csdn.net/article/details/140206912
