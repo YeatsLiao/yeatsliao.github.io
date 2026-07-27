@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8f9fa"/>
+  <rect x="1" y="1" width="1198" height="628" fill="none" stroke="#e9ecef" stroke-width="2"/>
+  <rect x="450" y="180" width="300" height="200" rx="12" fill="#e9ecef"/>
+  <circle cx="530" cy="250" r="28" fill="#ced4da"/>
+  <path d="M470 350 L560 280 L620 330 L680 270 L730 350 Z" fill="#adb5bd"/>
+  <text x="600" y="440" font-family="Arial, sans-serif" font-size="34" fill="#868e96" text-anchor="middle">Cover Image</text>
+  <text x="600" y="485" font-family="Arial, sans-serif" font-size="20" fill="#adb5bd" text-anchor="middle">images/posts/2026-07-26-blog-image-demo/cover.svg</text>
+</svg>

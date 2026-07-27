@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400">
+  <rect width="1000" height="400" fill="#f8f9fa"/>
+  <rect x="1" y="1" width="998" height="398" fill="none" stroke="#e9ecef" stroke-width="2"/>
+  <rect x="80" y="80" width="840" height="240" rx="10" fill="#212529"/>
+  <circle cx="120" cy="115" r="7" fill="#ff5f57"/>
+  <circle cx="145" cy="115" r="7" fill="#febc2e"/>
+  <circle cx="170" cy="115" r="7" fill="#28c840"/>
+  <text x="120" y="185" font-family="Consolas, monospace" font-size="24" fill="#e9ecef">![&#22270;&#29255;&#25551;&#36848;](/images/posts/&#25991;&#31456;&#25991;&#20214;&#22841;/fig-01-xxx.svg)</text>
+  <text x="120" y="245" font-family="Consolas, monospace" font-size="20" fill="#868e96">&#8593; Markdown &#25554;&#22270;&#35821;&#27861;&#65306;&#32477;&#23545;&#36335;&#24452;&#65292;&#20197; /images &#24320;&#22836;</text>
+  <text x="500" y="360" font-family="Arial, sans-serif" font-size="22" fill="#adb5bd" text-anchor="middle">Fig 02 - Markdown syntax</text>
+</svg>
