@@ -48,7 +48,7 @@ author:
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            : "76561199486968619"
+  steam            :
   tumblr           :
   twitter          : 
   vine             :
@@ -57,10 +57,10 @@ author:
   youtube          :
   wikipedia        :
   csdn             : https://yeatsliao.blog.csdn.net/
-  yuque            : https://www.yuque.com/yeats_liao
-  juejin           : https://juejin.cn/user/2124673209605054
-  aliyun           : https://developer.aliyun.com/profile/h4ged5ha4xsfs
-  tencentcloud     : https://developer.cloud.tencent.com/user/11176808
+  yuque            :
+  juejin           :
+  aliyun           :
+  tencentcloud     : https://developer.cloud.tencent.com/user/10178976
 
 
 # Reading Files
