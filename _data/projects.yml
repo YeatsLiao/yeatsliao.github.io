@@ -66,10 +66,120 @@ categories:
           en: "An interactive, visual platform for learning Java: web-based graphical interfaces and vivid animations flatten the learning curve."
         tags: [TypeScript, Java Teaching, Animation]
 
+  - id: trae
+    name:
+      zh: Trae 社区共创
+      en: Trae Community Co-creation
+    items:
+      - name: trae-skills
+        repo: trae-community/trae-skills
+        link: https://github.com/trae-community/trae-skills
+        desc:
+          zh: AI 编程执行约束技能集：为 AI 编码智能体提供可复用的执行控制与约束能力。
+          en: "AI coding execution control skills: reusable execution constraints for AI coding agents."
+        tags: [Python, Agent Skill]
+      - name: trae-agents
+        repo: trae-community/trae-agents
+        link: https://github.com/trae-community/trae-agents
+        desc:
+          zh: AI 编程 Agent 实践：智能体设计与应用的社区实践合集。
+          en: "AI coding agent practices: a community collection of agent design and application."
+        tags: [Agent, AI Coding]
+      - name: trae-mcp
+        repo: trae-community/trae-mcp
+        link: https://github.com/trae-community/trae-mcp
+        desc:
+          zh: MCP 在 AI 编程中的实践：模型上下文协议的接入与应用案例。
+          en: "MCP practices in AI coding: integration and application cases of the Model Context Protocol."
+        tags: [MCP, AI Coding]
+      - name: trae-templates
+        repo: trae-community/trae-templates
+        link: https://github.com/trae-community/trae-templates
+        desc:
+          zh: AI 编程项目模板：开箱即用的工程脚手架与最佳实践模板。
+          en: "AI coding project templates: ready-to-use scaffolds and best-practice templates."
+        tags: [TypeScript, Templates]
+      - name: trae-demos
+        repo: trae-community/trae-demos
+        link: https://github.com/trae-community/trae-demos
+        desc:
+          zh: AI 编程实践案例：社区成员的实战 Demo 合集。
+          en: "AI coding practice cases: a collection of hands-on demos from the community."
+        tags: [Demo, AI Coding]
+      - name: trae-learning
+        repo: trae-community/trae-learning
+        link: https://github.com/trae-community/trae-learning
+        desc:
+          zh: TRAE 学习课程与实践项目：从入门到进阶的社区学习路径。
+          en: "TRAE learning courses and practice projects: a community learning path from beginner to advanced."
+        tags: [Vue, Courses]
+      - name: trae-co-creation-demo-wall
+        repo: trae-community/trae-co-creation-demo-wall
+        link: https://github.com/trae-community/trae-co-creation-demo-wall
+        desc:
+          zh: TraeDemoWall 作品提交与展示平台（含国际版 trae-co-creation-demo-wall-intl）。
+          en: "TraeDemoWall, a platform for submitting and showcasing community works (incl. the international edition)."
+        tags: [TypeScript, Platform]
+      - name: trae-co-creation-projects
+        repo: trae-community/trae-co-creation-projects
+        link: https://github.com/trae-community/trae-co-creation-projects
+        desc:
+          zh: 多人协作的 AI 编程共创项目：社区成员共同开发的开源项目集。
+          en: "Collaborative AI coding projects co-developed by community members."
+        tags: [Co-creation, Open Source]
+      - name: awesome-trae
+        repo: trae-community/awesome-trae
+        link: https://github.com/trae-community/awesome-trae
+        desc:
+          zh: TRAE 社区资源总索引：课程、技能、模板与案例的统一入口。
+          en: "The central resource index of the TRAE community: a unified entry for courses, skills, templates, and cases."
+        tags: [Awesome, Index]
+      - name: trae-friends-events
+        repo: trae-community/trae-friends-events
+        link: https://github.com/trae-community/trae-friends-events
+        desc:
+          zh: TRAE Friends 社区活动信息：线上线下活动的组织与记录。
+          en: "Information about TRAE Friends community events, both online and offline."
+        tags: [Community, Events]
+
+  - id: apps
+    name:
+      zh: 应用与作品
+      en: Apps & Works
+    items:
+      - name: yeatsliao.github.io
+        repo: YeatsLiao/yeatsliao.github.io
+        link: https://github.com/YeatsLiao/yeatsliao.github.io
+        desc:
+          zh: 个人主页：基于 Jekyll 的数据驱动个人网站，含项目、荣誉、活动与博客栏目。
+          en: "Personal homepage: a data-driven Jekyll site with projects, honors, activities, and blog sections."
+        tags: [Jekyll, SCSS]
+      - name: huzhou-playbox
+        repo: YeatsLiao/huzhou-playbox
+        link: https://github.com/YeatsLiao/huzhou-playbox
+        desc:
+          zh: demowall 活动互动应用：以轻量小游戏展示湖州文化特色，兼顾用户参与和休闲娱乐。
+          en: "An interactive app for the demowall event: lightweight mini-games showcasing Huzhou's culture while engaging and entertaining users."
+        tags: [TypeScript, Interactive, Culture]
+      - name: perler-beads
+        repo: YeatsLiao/perler-beads
+        link: https://github.com/YeatsLiao/perler-beads
+        desc:
+          zh: 拼拼豆豆：像素画风格的创意小工具。
+          en: "Perler beads: a pixel-art style creative tool."
+        tags: [Vue, Creative Tool]
+      - name: jiangfu-campus-tour-guide
+        repo: YeatsLiao/jiangfu-campus-tour-guide
+        link: https://github.com/YeatsLiao/jiangfu-campus-tour-guide
+        desc:
+          zh: 江服校园导游咨询系统：基于 C 语言与图结构的校园景点导览与路径查询系统。
+          en: "A campus tour guide and consultation system built in C, with graph-based attraction navigation and route queries."
+        tags: [C, Data Structures]
+
   - id: docs
     name:
-      zh: 开源文档与工具
-      en: Open Source Docs & Tools
+      zh: 开源文档与知识库
+      en: Open Source Docs & Knowledge Base
     items:
       - name: rxtx-docs-cn
         repo: YeatsLiao/rxtx-docs-cn
@@ -79,13 +189,13 @@ categories:
           zh: RXTX 中文文档：为 Java 生态经典的跨平台串口/并口通信库系统性翻译整理中文文档，GitHub Pages 在线阅读。
           en: "Chinese documentation for RXTX: a systematic translation of the classic cross-platform serial/parallel port library for Java, readable online via GitHub Pages."
         tags: [Java, Serial Port, Documentation]
-      - name: huzhou-playbox
-        repo: YeatsLiao/huzhou-playbox
-        link: https://github.com/YeatsLiao/huzhou-playbox
+      - name: wiki
+        repo: YeatsLiao/wiki
+        link: https://github.com/YeatsLiao/wiki
         desc:
-          zh: demowall 活动互动应用：以轻量小游戏展示湖州文化特色，兼顾用户参与和休闲娱乐。
-          en: "An interactive app for the demowall event: lightweight mini-games showcasing Huzhou's culture while engaging and entertaining users."
-        tags: [TypeScript, Interactive, Culture]
+          zh: 个人知识库：系统化沉淀学习笔记与技术文档的 wiki 站点。
+          en: "Personal knowledge base: a wiki site for systematic learning notes and technical documentation."
+        tags: [Knowledge Base, Wiki]
       - name: personal-study-notes
         repo: YeatsLiao/personal-study-notes
         link: https://github.com/YeatsLiao/personal-study-notes
@@ -93,10 +203,3 @@ categories:
           zh: 个人学习笔记仓库：Java、后端与工程化方向的系统性学习记录。
           en: "Personal study notes: systematic learning records on Java, backend development, and engineering practices."
         tags: [Notes, Knowledge Base]
-      - name: perler-beads
-        repo: YeatsLiao/perler-beads
-        link: https://github.com/YeatsLiao/perler-beads
-        desc:
-          zh: 拼拼豆豆：像素画风格的创意小工具。
-          en: "Perler beads: a pixel-art style creative tool."
-        tags: [Vue, Creative Tool]
