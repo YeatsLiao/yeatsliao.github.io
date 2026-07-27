@@ -37,8 +37,8 @@ redirect_from:
 # 荣誉与奖项
 
 <p>
-  <span class="i18n-zh">云厂商与开发者社区认证证书 40+ 项，另有国家励志奖学金等奖项。</span>
-  <span class="i18n-en">40+ certifications from cloud vendors and developer communities, plus awards including the National Endeavor Fellowship.</span>
+  <span class="i18n-zh">云厂商与开发者社区认证证书 40+ 项，覆盖云计算、AI 与开源生态。</span>
+  <span class="i18n-en">40+ certifications from cloud vendors and developer communities, covering cloud computing, AI, and the open source ecosystem.</span>
   <a href="{{ '/honors/' | relative_url }}"><span class="i18n-zh">查看荣誉墙 →</span><span class="i18n-en">View the honor wall →</span></a>
 </p>
 
