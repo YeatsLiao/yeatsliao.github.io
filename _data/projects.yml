@@ -17,7 +17,6 @@ categories:
     items:
       - name: emotion-sky
         repo: YeatsLiao/emotion-sky
-        featured: true
         link: https://github.com/YeatsLiao/emotion-sky
         desc:
           zh: 情绪记录与可视化 Web 应用：将用户情绪映射为动态天气场景，支持城市情绪地图和趋势分析。
@@ -39,6 +38,7 @@ categories:
         tags: [Python, Agent Skill, AI Writing]
       - name: mindnlp（社区贡献）
         repo: YeatsLiao/mindnlp
+        featured: true
         link: https://github.com/YeatsLiao/mindnlp
         desc:
           zh: 基于 MindSpore 的 NLP/LLM 框架，兼容 HuggingFace 模型与数据集，参与社区代码贡献。
@@ -52,7 +52,6 @@ categories:
     items:
       - name: design-patterns-23
         repo: YeatsLiao/design-patterns-23
-        featured: true
         link: https://github.com/YeatsLiao/design-patterns-23
         desc:
           zh: 为解决设计模式"看得懂记不住"的学习痛点，用 React 构建 23 种 GoF 设计模式的可视化交互演示与代码对照平台。
@@ -115,6 +114,7 @@ categories:
         tags: [Vue, Courses]
       - name: trae-co-creation-demo-wall
         repo: trae-community/trae-co-creation-demo-wall
+        featured: true
         link: https://github.com/trae-community/trae-co-creation-demo-wall
         desc:
           zh: TraeDemoWall 作品提交与展示平台（含国际版 trae-co-creation-demo-wall-intl）。
@@ -178,9 +178,15 @@ categories:
 
   - id: docs
     name:
-      zh: 开源文档与知识库
-      en: Open Source Docs & Knowledge Base
+      zh: 开源库与文档
+      en: Open Source Libraries & Docs
     items:
+      - name: plist4cj
+        link: https://atomgit.com/yeatsliao1/plist4cj
+        desc:
+          zh: 基于仓颉生态的 plist 解析与生成工具库：支持 XML/二进制/ASCII 三种格式，Java 库 dd-plist 的仓颉移植版本。
+          en: "A plist parsing and generation library for the Cangjie ecosystem: supports XML, binary, and ASCII formats; a Cangjie port of the Java library dd-plist."
+        tags: [Cangjie, Library, AtomGit]
       - name: rxtx-docs-cn
         repo: YeatsLiao/rxtx-docs-cn
         featured: true
