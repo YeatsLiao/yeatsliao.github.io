@@ -29,13 +29,34 @@ categories:
           zh: 基于魔珐星云 SDK 的文化遗产数字守护者：数字人实时讲解与交互问答 Demo。
           en: "Digital guardian for cultural heritage built on the Xmov SDK: a demo of real-time digital-human narration and interactive Q&A."
         tags: [Digital Human, SDK, Interactive Q&A]
-      - name: AI Agent Skill 系列
+      - name: ascend-blog-skill
         repo: YeatsLiao/ascend-blog-skill
         link: https://github.com/YeatsLiao/ascend-blog-skill
         desc:
-          zh: 面向 AI 编码智能体的技能封装：昇腾/鲲鹏技术博客创作（ascend-blog-skill、kunpeng-blog-skill）、技术写作（yeats-tech-skill）与日记（yeats-diary-skill）等。
-          en: "Skill packages for AI coding agents: Ascend/Kunpeng tech blog writing (ascend-blog-skill, kunpeng-blog-skill), technical writing (yeats-tech-skill), journaling (yeats-diary-skill), and more."
-        tags: [Python, Agent Skill, AI Writing]
+          zh: 面向 AI 编码智能体的昇腾技术博客创作技能：封装昇腾生态技术写作的领域知识与创作流程。
+          en: "An Ascend tech-blog writing skill for AI coding agents: encapsulates domain knowledge and writing workflows for the Ascend ecosystem."
+        tags: [Python, Agent Skill, Ascend]
+      - name: kunpeng-blog-skill
+        repo: YeatsLiao/kunpeng-blog-skill
+        link: https://github.com/YeatsLiao/kunpeng-blog-skill
+        desc:
+          zh: 面向 AI 编码智能体的鲲鹏技术博客创作技能：封装鲲鹏生态技术写作的领域知识与创作流程。
+          en: "A Kunpeng tech-blog writing skill for AI coding agents: encapsulates domain knowledge and writing workflows for the Kunpeng ecosystem."
+        tags: [Agent Skill, Kunpeng]
+      - name: yeats-tech-skill
+        repo: YeatsLiao/yeats-tech-skill
+        link: https://github.com/YeatsLiao/yeats-tech-skill
+        desc:
+          zh: 通用技术写作技能：为 AI 编码智能体提供技术文章的选题、结构与行文风格规范。
+          en: "A general technical-writing skill: provides AI coding agents with topic selection, structure, and writing-style conventions for tech articles."
+        tags: [Python, Agent Skill, Tech Writing]
+      - name: yeats-diary-skill
+        repo: YeatsLiao/yeats-diary-skill
+        link: https://github.com/YeatsLiao/yeats-diary-skill
+        desc:
+          zh: 日记创作技能：让 AI 编码智能体按个人风格与模板自动整理、撰写日记。
+          en: "A journaling skill: lets AI coding agents organize and write diary entries following a personal style and template."
+        tags: [Agent Skill, Journaling]
       - name: mindnlp（社区贡献）
         repo: YeatsLiao/mindnlp
         featured: true
