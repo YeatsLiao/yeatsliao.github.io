@@ -181,6 +181,16 @@ award_groups:
       en: Open Source Communities
     items:
       - name:
+          zh: 鲲鹏高性能计算开发者认证（入门级）
+          en: "Kunpeng HPC Developer Certification (Entry Level)"
+        period: 2026-07
+        image: images/certs/opensource/kunpeng-hpc-dev-cert.jpg
+      - name:
+          zh: 鲲鹏应用开发者认证（入门级）
+          en: "Kunpeng Application Developer Certification (Entry Level)"
+        period: 2026-07
+        image: images/certs/opensource/kunpeng-app-dev-cert.jpg
+      - name:
           zh: 昇腾算子开发者认证（入门级）
           en: "Ascend Operator Developer Certification (Entry Level)"
         period: 2026-07
