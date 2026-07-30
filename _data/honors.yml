@@ -292,6 +292,16 @@ award_groups:
         image: images/certs/iflytek/iflytek-ai-camp.jpg
 
   - name:
+      zh: 涛思数据
+      en: TDengine
+    items:
+      - name:
+          zh: TDengine 时序数据库认证专员（TCP-BP）
+          en: TDengine Certified Professional (TCP-BP)
+        period: 2025-10
+        image: images/certs/tdengine/tdengine-tcp-bp.jpg
+
+  - name:
       zh: 奖学金与竞赛
       en: Scholarships & Competitions
     items:
