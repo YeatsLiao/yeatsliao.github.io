@@ -177,64 +177,79 @@ award_groups:
         image: images/certs/csdn/yuanchuang-essay-medal.jpg
 
   - name:
-      zh: 开源社区
-      en: Open Source Communities
+      zh: 鲲鹏
+      en: Kunpeng
     items:
       - name:
           zh: 鲲鹏高性能计算开发者认证（入门级）
           en: "Kunpeng HPC Developer Certification (Entry Level)"
         period: 2026-07
-        image: images/certs/opensource/kunpeng-hpc-dev-cert.jpg
+        image: images/certs/kunpeng/kunpeng-hpc-dev-cert.jpg
       - name:
           zh: 鲲鹏应用开发者认证（入门级）
           en: "Kunpeng Application Developer Certification (Entry Level)"
         period: 2026-07
-        image: images/certs/opensource/kunpeng-app-dev-cert.jpg
-      - name:
-          zh: 昇腾算子开发者认证（入门级）
-          en: "Ascend Operator Developer Certification (Entry Level)"
-        period: 2026-07
-        image: images/certs/opensource/ascend-operator-dev-cert.jpg
-      - name:
-          zh: 昇腾训练开发者认证（入门级）
-          en: "Ascend Training Developer Certification (Entry Level)"
-        period: 2026-07
-        image: images/certs/opensource/ascend-training-dev-cert.jpg
-      - name:
-          zh: 昇腾推理开发者认证（入门级）
-          en: "Ascend Inference Developer Certification (Entry Level)"
-        period: 2026-07
-        image: images/certs/opensource/ascend-inference-dev-cert.jpg
-      - name:
-          zh: OceanBase OBCA 认证
-          en: OceanBase OBCA Certification
-        period: 2023-01
-        image: images/certs/opensource/oceanbase-obca.jpg
-      - name:
-          zh: openGauss OGCA 初级认证
-          en: openGauss OGCA Certification
-        period: 2022-12
-        image: images/certs/opensource/opengauss-ogca.jpg
+        image: images/certs/kunpeng/kunpeng-app-dev-cert.jpg
       - name:
           zh: 鲲鹏微认证：openEuler 社区开源贡献实践
           en: "Kunpeng Micro-cert: openEuler Community Contribution"
         period: 2022-12
-        image: images/certs/opensource/openeuler-contribution.jpg
+        image: images/certs/kunpeng/openeuler-contribution.jpg
       - name:
           zh: 鲲鹏微认证：openGauss 数据库金融领域使用实践
           en: "Kunpeng Micro-cert: openGauss in Finance"
         period: 2022-12
-        image: images/certs/opensource/opengauss-finance.jpg
+        image: images/certs/kunpeng/opengauss-finance.jpg
+
+  - name:
+      zh: 昇腾
+      en: Ascend
+    items:
+      - name:
+          zh: 昇腾算子开发者认证（入门级）
+          en: "Ascend Operator Developer Certification (Entry Level)"
+        period: 2026-07
+        image: images/certs/ascend/ascend-operator-dev-cert.jpg
+      - name:
+          zh: 昇腾训练开发者认证（入门级）
+          en: "Ascend Training Developer Certification (Entry Level)"
+        period: 2026-07
+        image: images/certs/ascend/ascend-training-dev-cert.jpg
+      - name:
+          zh: 昇腾推理开发者认证（入门级）
+          en: "Ascend Inference Developer Certification (Entry Level)"
+        period: 2026-07
+        image: images/certs/ascend/ascend-inference-dev-cert.jpg
       - name:
           zh: 昇腾微认证：MindSpore 训练手写数字识别模型
           en: "Ascend Micro-cert: Handwriting Recognition with MindSpore"
         period: 2022-12
-        image: images/certs/opensource/mindspore-handwriting.jpg
+        image: images/certs/ascend/mindspore-handwriting.jpg
       - name:
           zh: 昇腾微认证：弹性云服务器实现目标检测应用
           en: "Ascend Micro-cert: Object Detection on ECS"
         period: 2022-12
-        image: images/certs/opensource/ascend-object-detection.jpg
+        image: images/certs/ascend/ascend-object-detection.jpg
+
+  - name:
+      zh: OceanBase
+      en: OceanBase
+    items:
+      - name:
+          zh: OceanBase OBCA 认证
+          en: OceanBase OBCA Certification
+        period: 2023-01
+        image: images/certs/oceanbase/oceanbase-obca.jpg
+
+  - name:
+      zh: openGauss
+      en: openGauss
+    items:
+      - name:
+          zh: openGauss OGCA 初级认证
+          en: openGauss OGCA Certification
+        period: 2022-12
+        image: images/certs/opengauss/opengauss-ogca.jpg
 
   - name:
       zh: 字节跳动
