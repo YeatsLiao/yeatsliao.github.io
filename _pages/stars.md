@@ -139,6 +139,6 @@ author_profile: true
 {% endfor %}
 
 <div class="stars-note">
-  <span class="i18n-zh">本页面由 GitHub Actions 每周自动同步</code></span>
-  <span class="i18n-en">This page is auto-synced weekly via GitHub Actions. Data source: <code>GET /user/starred</code></span>
+  <span class="i18n-zh">本页面由 GitHub Actions 每周自动同步</span>
+  <span class="i18n-en">This page is auto-synced weekly via GitHub Actions. </code></span>
 </div>
