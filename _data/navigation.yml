@@ -13,5 +13,7 @@ main:
   - title: "Blog"
     title_zh: "博客"
     url: "/blog/"
+  - title: "Stars"
+    url: "/stars/"
   - title: "Wiki"
     url: "https://yeatsliao.github.io/wiki/"

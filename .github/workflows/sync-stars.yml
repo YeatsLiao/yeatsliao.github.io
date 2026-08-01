@@ -1,0 +1,105 @@
+name: Sync GitHub Stars
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'  # 每周一凌晨 2 点
+  workflow_dispatch:       # 手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch and sync stars
+        env:
+          GH_TOKEN: ${{ secrets.GH_STARS_TOKEN }}
+        run: |
+          python3 << 'EOF'
+          import os, json, urllib.request, yaml
+
+          TOKEN = os.environ["GH_TOKEN"]
+          STARS_FILE = "_data/stars.yml"
+
+          # 1. Fetch all starred repos
+          starred = []
+          page = 1
+          while True:
+              url = f"https://api.github.com/user/starred?per_page=100&page={page}"
+              req = urllib.request.Request(url, headers={
+                  "Authorization": f"token {TOKEN}",
+                  "Accept": "application/vnd.github.v3+json"
+              })
+              with urllib.request.urlopen(req) as resp:
+                  batch = json.loads(resp.read())
+              if not batch:
+                  break
+              starred.extend(batch)
+              page += 1
+
+          starred_set = {r["full_name"] for r in starred}
+          starred_map = {r["full_name"]: r for r in starred}
+          print(f"Fetched {len(starred_set)} starred repos")
+
+          # 2. Read current stars.yml
+          with open(STARS_FILE, "r", encoding="utf-8") as f:
+              data = yaml.safe_load(f)
+
+          # 3. Collect existing names
+          existing = set()
+          for cat in data["categories"]:
+              for item in cat["items"]:
+                  existing.add(item["name"])
+
+          # 4. Remove unstarred
+          removed = existing - starred_set
+          if removed:
+              print(f"Removing {len(removed)} unstarred: {removed}")
+              for cat in data["categories"]:
+                  cat["items"] = [i for i in cat["items"] if i["name"] not in removed]
+
+          # 5. Find new stars
+          new_repos = starred_set - existing
+          if new_repos:
+              print(f"Adding {len(new_repos)} new stars")
+              # Find or create inbox category
+              inbox = None
+              for cat in data["categories"]:
+                  if cat["id"] == "inbox":
+                      inbox = cat
+                      break
+              if not inbox:
+                  inbox = {"id": "inbox", "name": {"zh": "待分类", "en": "Inbox"}, "items": []}
+                  data["categories"].append(inbox)
+
+              for name in sorted(new_repos):
+                  repo = starred_map[name]
+                  inbox["items"].append({
+                      "name": name,
+                      "desc": (repo.get("description") or "")[:80],
+                      "lang": repo.get("language") or ""
+                  })
+
+          # 6. Write back
+          if removed or new_repos:
+              with open(STARS_FILE, "w", encoding="utf-8") as f:
+                  yaml.dump(data, f, allow_unicode=True, default_flow_style=False, sort_keys=False, width=120)
+              print("stars.yml updated")
+          else:
+              print("No changes needed")
+          EOF
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/stars.yml
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: sync github stars $(date +%Y-%m-%d)"
+            git push
+          fi
