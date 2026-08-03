@@ -1,332 +1,283 @@
-# GitHub Stars 分类数据
-# 同步机制：.github/workflows/sync-stars.yml 每周自动拉取并更新本文件
-# 手动维护：新增/调整分类直接编辑本文件即可，页面自动渲染
-# 字段说明：
-#   name:  仓库全名（owner/repo）
-#   desc:  一句话描述（中文）
-#   lang:  主要语言（选填）
-#   url:   仓库链接（自动拼接，可不填）
-
 categories:
-  - id: ai-llm
-    name:
-      zh: AI / 大模型
-      en: AI / LLM
-    items:
-      - name: openclaw/openclaw
-        desc: 个人 AI 助手框架，跨平台
-        lang: TypeScript
-      - name: QuantumNous/new-api
-        desc: LLM 聚合分发网关，兼容 OpenAI/Claude/Gemini 格式
-        lang: Go
-      - name: ultralytics/ultralytics
-        desc: YOLO 系列目标检测/分割/跟踪
-        lang: Python
-      - name: nndeploy/nndeploy
-        desc: 简单易用的高性能 AI 部署框架
-        lang: C++
-      - name: spring-ai-alibaba/spring-ai-alibaba-admin
-        desc: Spring AI Alibaba Agent 追踪与评估控制台
-        lang: Java
-      - name: harry0703/MoneyPrinterTurbo
-        desc: AI 一键生成高清短视频
-        lang: Python
-      - name: DayuanJiang/next-ai-draw-io
-        desc: AI + draw.io 自然语言绘图
-        lang: TypeScript
-      - name: VoltAgent/awesome-design-md
-        desc: 品牌设计系统 DESIGN.md 合集，供 AI 生成 UI
-      - name: linkedlist771/SoraWatermarkCleaner
-        desc: Sora2 水印深度学习清除
-        lang: Python
-      - name: ihmily/outfit-anyone
-        desc: AI 虚拟试衣
-        lang: Python
-      - name: thunlp/WantWords
-        desc: 开源反向词典（NLP）
-        lang: Python
-      - name: yuezih/King-of-Pigeon
-        desc: 鸽王识别（CV 实战）
-        lang: Python
-
-  - id: java-backend
-    name:
-      zh: Java 后端
-      en: Java Backend
-    items:
-      - name: alibaba/arthas
-        desc: Java 在线诊断工具
-        lang: Java
-      - name: alibaba/p3c
-        desc: 阿里巴巴 Java 编码规约
-        lang: Java
-      - name: alibaba/nacos
-        desc: 服务发现与配置中心
-        lang: Java
-      - name: chinabugotech/hutool
-        desc: Java 工具类库
-        lang: Java
-      - name: dromara/Sa-Token
-        desc: Java 权限认证框架
-        lang: Java
-      - name: dromara/SMS4J
-        desc: 短信聚合框架
-        lang: Java
-      - name: commonmark/commonmark-java
-        desc: CommonMark Markdown 解析渲染
-        lang: Java
-      - name: eclipse-jifa/jifa
-        desc: Heap Dump / GC Log / Thread Dump 在线分析
-        lang: Java
-      - name: jishenghua/jshERP
-        desc: 进销存 + 财务 ERP
-        lang: Java
-      - name: 1024-lab/smart-admin
-        desc: 企业级后台管理平台
-        lang: Java
-      - name: YunaiV/ruoyi-vue-pro
-        desc: RuoYi 全功能 Pro 版
-        lang: Java
-      - name: yangzongzhuan/RuoYi-Vue3
-        desc: RuoYi 前后端分离 Vue3 版
-        lang: Java
-      - name: talkpoin/ruoyi-spring-boot-all
-        desc: RuoYi 全家桶
-        lang: Java
-      - name: jeecgboot/JeecgBoot
-        desc: 低代码 + AI 平台
-        lang: Java
-      - name: happyfish100/fastdfs
-        desc: 高性能分布式文件系统
-        lang: C
-      - name: xiaoxuxiansheng/redmq
-        desc: 基于 Redis 的消息队列
-        lang: Java
-
-  - id: frontend-ui
-    name:
-      zh: 前端 / UI
-      en: Frontend / UI
-    items:
-      - name: element-plus/element-plus
-        desc: Vue3 UI 组件库
-        lang: Vue
-      - name: ant-design/ant-design
-        desc: React UI 设计系统
-        lang: TypeScript
-      - name: Tencent/tdesign
-        desc: 腾讯企业级设计体系
-        lang: TypeScript
-      - name: layui/layui
-        desc: 经典模块化前端 UI 框架
-        lang: JavaScript
-      - name: lunar-landing/layui-vue
-        desc: Layui + Vue 组件库
-        lang: Vue
-      - name: PanJiaChen/vue-element-admin
-        desc: Vue 后台管理模板
-        lang: Vue
-      - name: nuxt/nuxt
-        desc: Vue 全栈框架
-        lang: TypeScript
-      - name: withastro/astro
-        desc: 内容驱动网站框架
-        lang: TypeScript
-      - name: bilibili/flv.js
-        desc: HTML5 FLV 播放器
-        lang: JavaScript
-      - name: simeydotme/pokemon-cards-css
-        desc: CSS 高级特效合集
-        lang: CSS
-      - name: chanind/hanzi-writer
-        desc: 汉字笔顺动画与练习
-        lang: JavaScript
-      - name: justjavac/wechat-miniapp-radar
-        desc: 微信小程序雷达
-        lang: JavaScript
-
-  - id: devtools
-    name:
-      zh: 开发工具
-      en: DevTools
-    items:
-      - name: 1Panel-dev/1Panel
-        desc: 现代化开源服务器运维面板
-        lang: Go
-      - name: tiny-craft/tiny-rdm
-        desc: 轻量 Redis GUI 客户端
-        lang: Vue
-      - name: coreybutler/nvm-windows
-        desc: Windows Node 版本管理
-        lang: Go
-      - name: NaiboWang/EasySpider
-        desc: 可视化无代码爬虫
-        lang: JavaScript
-      - name: Liubsyy/JarEditor
-        desc: IDEA 直接编辑 jar 内文件
-        lang: Java
-      - name: darkreader/darkreader
-        desc: 全局暗色模式浏览器扩展
-        lang: TypeScript
-      - name: xM4ddy/OFGB
-        desc: Windows 11 去广告工具
-        lang: C#
-      - name: t1m0thyj/WinDynamicDesktop
-        desc: Windows 动态壁纸
-        lang: C#
-      - name: FlorianWoelki/obsidian-iconize
-        desc: Obsidian 图标插件
-        lang: TypeScript
-      - name: PKM-er/Blue-Topaz_Obsidian-css
-        desc: Obsidian 蓝色主题
-        lang: CSS
-      - name: netchx/netch
-        desc: 简洁代理客户端
-        lang: C#
-      - name: clash-verge-rev/clash-verge-rev
-        desc: Tauri 代理 GUI
-        lang: TypeScript
-      - name: leiurayer/downkyi
-        desc: B站视频下载
-        lang: C#
-      - name: sensepost/gowitness
-        desc: 网页批量截图工具
-        lang: Go
-      - name: doocs/md
-        desc: 微信 Markdown 编辑器
-        lang: TypeScript
-      - name: docsifyjs/docsify
-        desc: 文档站生成器
-        lang: JavaScript
-      - name: halo-dev/halo
-        desc: 开源建站工具
-        lang: Java
-      - name: AndroidCoderPeng/CodeGenerator
-        desc: 软著代码生成器
-        lang: C#
-      - name: getmoneynote/moneynote-api
-        desc: 个人记账工具
-        lang: Java
-      - name: trae-community/trae-learning
-        desc: Trae 学习课程
-        lang: Vue
-      - name: trae-community/trae-mcp
-        desc: Trae MCP 实践
-      - name: trae-community/trae-co-creation-demo-wall
-        desc: Trae DemoWall 展示平台
-        lang: TypeScript
-      - name: trae-community/trae-friends-events
-        desc: Trae 社区活动
-        lang: Python
-
-  - id: learning
-    name:
-      zh: 学习 / 面试
-      en: Learning / Interview
-    items:
-      - name: PKUFlyingPig/cs-self-learning
-        desc: 计算机自学指南
-      - name: donnemartin/system-design-primer
-        desc: 系统设计学习 + 面试
-        lang: Python
-      - name: soulmachine/system-design
-        desc: 系统设计题精选
-      - name: jwasham/coding-interview-university
-        desc: 编程面试自学计划
-      - name: doocs/leetcode
-        desc: LeetCode 题解
-        lang: Java
-      - name: liweiwei1419/LeetCode-Solutions-in-Good-Style
-        desc: LeetCode 题解（清晰风格）
-        lang: Java
-      - name: OI-wiki/OI-wiki
-        desc: 算法竞赛 Wiki
-      - name: frank-lam/fullstack-tutorial
-        desc: 全栈开发教程
-      - name: Interview-Science/interview-english
-        desc: 技术面试英语
-      - name: gobyexample-cn/gobyexample
-        desc: Go 语言入门示例
-        lang: Go
-      - name: missing-semester-cn/missing-semester-cn.github.io
-        desc: CS 缺失学期（中文版）
-      - name: shimohq/chinese-programmer-wrong-pronunciation
-        desc: 程序员易错发音
-        lang: JavaScript
-      - name: k88hudson/git-flight-rules
-        desc: Git 飞行规则
-      - name: ryanhanwu/How-To-Ask-Questions-The-Smart-Way
-        desc: 提问的智慧
-      - name: conventional-commits/conventionalcommits.org
-        desc: Conventional Commits 规范
-        lang: SCSS
-      - name: Formulahendry/955.WLB
-        desc: 955 不加班公司名单
-      - name: CollegesChat/university-information
-        desc: 全国高校真实信息
-
-  - id: media-iot
-    name:
-      zh: 流媒体 / IoT
-      en: Media / IoT
-    items:
-      - name: ZLMediaKit/ZLMediaKit
-        desc: 高性能流媒体服务器（RTSP/RTMP/HLS/WebRTC）
-        lang: C++
-      - name: red5pro/streaming-html5
-        desc: HTML5 直播 SDK 示例
-        lang: JavaScript
-      - name: sutro-planet/easyvideotrans
-        desc: 视频翻译工具
-      - name: CuSO4Gem/pytvzhen
-        desc: 视频转文字
-        lang: Python
-      - name: rxtx/rxtx
-        desc: Java 跨平台串口通信库
-        lang: C
-      - name: oldweipro/hik-dev
-        desc: 海康威视 Java 二次开发 Demo
-        lang: Java
-      - name: qemu/qemu
-        desc: 开源虚拟机/模拟器
-        lang: C
-      - name: LaurieWired/XplaneFlightData
-        desc: X-Plane 飞行数据 C++ 示例
-        lang: C++
-
-  - id: docs-books
-    name:
-      zh: 文档 / 书籍
-      en: Docs / Books
-    items:
-      - name: iamshuaidi/CS-Book
-        desc: 计算机科学书籍合集
-      - name: billie66/TLCL
-        desc: 快乐的 Linux 命令行
-      - name: jaywcjlove/linux-command
-        desc: Linux 命令大全搜索
-      - name: jaywcjlove/awesome-mac
-        desc: macOS 优质软件合集
-      - name: SwiftGGTeam/the-swift-programming-language-in-chinese
-        desc: Swift 官方教程中文版
-      - name: jasper-zhang/influxdb-document-cn
-        desc: InfluxDB 中文文档
-      - name: geekcompany/ResumeSample
-        desc: 程序员简历模板系列
-      - name: resumejob/awesome-resume
-        desc: 简历模板合集
-      - name: anuraghazra/github-readme-stats
-        desc: GitHub README 动态统计卡
-        lang: JavaScript
-      - name: star-history/star-history
-        desc: GitHub Star 历史曲线图
-        lang: TypeScript
-      - name: academicpages/academicpages.github.io
-        desc: 学术个人主页模板
-      - name: RayeRen/acad-homepage.github.io
-        desc: 现代学术主页模板
-      - name: TonyCrane/slide-template
-        desc: reveal-md 幻灯片模板
-      - name: gin-gonic/gin
-        desc: Go 高性能 Web 框架
-        lang: Go
+- id: ai-llm
+  name:
+    zh: AI / 大模型
+    en: AI / LLM
+  items:
+  - name: QuantumNous/new-api
+    desc: LLM 聚合分发网关，兼容 OpenAI/Claude/Gemini 格式
+    lang: Go
+  - name: ultralytics/ultralytics
+    desc: YOLO 系列目标检测/分割/跟踪
+    lang: Python
+  - name: nndeploy/nndeploy
+    desc: 简单易用的高性能 AI 部署框架
+    lang: C++
+  - name: spring-ai-alibaba/spring-ai-alibaba-admin
+    desc: Spring AI Alibaba Agent 追踪与评估控制台
+    lang: Java
+  - name: harry0703/MoneyPrinterTurbo
+    desc: AI 一键生成高清短视频
+    lang: Python
+  - name: DayuanJiang/next-ai-draw-io
+    desc: AI + draw.io 自然语言绘图
+    lang: TypeScript
+  - name: VoltAgent/awesome-design-md
+    desc: 品牌设计系统 DESIGN.md 合集，供 AI 生成 UI
+  - name: linkedlist771/SoraWatermarkCleaner
+    desc: Sora2 水印深度学习清除
+    lang: Python
+  - name: thunlp/WantWords
+    desc: 开源反向词典（NLP）
+    lang: Python
+  - name: yuezih/King-of-Pigeon
+    desc: 鸽王识别（CV 实战）
+    lang: Python
+- id: java-backend
+  name:
+    zh: Java 后端
+    en: Java Backend
+  items:
+  - name: alibaba/arthas
+    desc: Java 在线诊断工具
+    lang: Java
+  - name: alibaba/p3c
+    desc: 阿里巴巴 Java 编码规约
+    lang: Java
+  - name: alibaba/nacos
+    desc: 服务发现与配置中心
+    lang: Java
+  - name: chinabugotech/hutool
+    desc: Java 工具类库
+    lang: Java
+  - name: dromara/Sa-Token
+    desc: Java 权限认证框架
+    lang: Java
+  - name: dromara/SMS4J
+    desc: 短信聚合框架
+    lang: Java
+  - name: commonmark/commonmark-java
+    desc: CommonMark Markdown 解析渲染
+    lang: Java
+  - name: eclipse-jifa/jifa
+    desc: Heap Dump / GC Log / Thread Dump 在线分析
+    lang: Java
+  - name: jishenghua/jshERP
+    desc: 进销存 + 财务 ERP
+    lang: Java
+  - name: talkpoin/ruoyi-spring-boot-all
+    desc: RuoYi 全家桶
+    lang: Java
+  - name: happyfish100/fastdfs
+    desc: 高性能分布式文件系统
+    lang: C
+  - name: xiaoxuxiansheng/redmq
+    desc: 基于 Redis 的消息队列
+    lang: Java
+- id: frontend-ui
+  name:
+    zh: 前端 / UI
+    en: Frontend / UI
+  items:
+  - name: element-plus/element-plus
+    desc: Vue3 UI 组件库
+    lang: Vue
+  - name: ant-design/ant-design
+    desc: React UI 设计系统
+    lang: TypeScript
+  - name: Tencent/tdesign
+    desc: 腾讯企业级设计体系
+    lang: TypeScript
+  - name: layui/layui
+    desc: 经典模块化前端 UI 框架
+    lang: JavaScript
+  - name: nuxt/nuxt
+    desc: Vue 全栈框架
+    lang: TypeScript
+  - name: withastro/astro
+    desc: 内容驱动网站框架
+    lang: TypeScript
+  - name: bilibili/flv.js
+    desc: HTML5 FLV 播放器
+    lang: JavaScript
+  - name: simeydotme/pokemon-cards-css
+    desc: CSS 高级特效合集
+    lang: CSS
+  - name: chanind/hanzi-writer
+    desc: 汉字笔顺动画与练习
+    lang: JavaScript
+  - name: justjavac/wechat-miniapp-radar
+    desc: 微信小程序雷达
+    lang: JavaScript
+- id: devtools
+  name:
+    zh: 开发工具
+    en: DevTools
+  items:
+  - name: tiny-craft/tiny-rdm
+    desc: 轻量 Redis GUI 客户端
+    lang: Vue
+  - name: coreybutler/nvm-windows
+    desc: Windows Node 版本管理
+    lang: Go
+  - name: NaiboWang/EasySpider
+    desc: 可视化无代码爬虫
+    lang: JavaScript
+  - name: Liubsyy/JarEditor
+    desc: IDEA 直接编辑 jar 内文件
+    lang: Java
+  - name: xM4ddy/OFGB
+    desc: Windows 11 去广告工具
+    lang: C#
+  - name: t1m0thyj/WinDynamicDesktop
+    desc: Windows 动态壁纸
+    lang: C#
+  - name: FlorianWoelki/obsidian-iconize
+    desc: Obsidian 图标插件
+    lang: TypeScript
+  - name: clash-verge-rev/clash-verge-rev
+    desc: Tauri 代理 GUI
+    lang: TypeScript
+  - name: leiurayer/downkyi
+    desc: B站视频下载
+    lang: C#
+  - name: doocs/md
+    desc: 微信 Markdown 编辑器
+    lang: TypeScript
+  - name: AndroidCoderPeng/CodeGenerator
+    desc: 软著代码生成器
+    lang: C#
+  - name: getmoneynote/moneynote-api
+    desc: 个人记账工具
+    lang: Java
+  - name: trae-community/trae-learning
+    desc: Trae 学习课程
+    lang: Vue
+  - name: trae-community/trae-mcp
+    desc: Trae MCP 实践
+  - name: trae-community/trae-co-creation-demo-wall
+    desc: Trae DemoWall 展示平台
+    lang: TypeScript
+  - name: trae-community/trae-friends-events
+    desc: Trae 社区活动
+    lang: Python
+- id: learning
+  name:
+    zh: 学习 / 面试
+    en: Learning / Interview
+  items:
+  - name: PKUFlyingPig/cs-self-learning
+    desc: 计算机自学指南
+  - name: donnemartin/system-design-primer
+    desc: 系统设计学习 + 面试
+    lang: Python
+  - name: jwasham/coding-interview-university
+    desc: 编程面试自学计划
+  - name: doocs/leetcode
+    desc: LeetCode 题解
+    lang: Java
+  - name: OI-wiki/OI-wiki
+    desc: 算法竞赛 Wiki
+  - name: Interview-Science/interview-english
+    desc: 技术面试英语
+  - name: missing-semester-cn/missing-semester-cn.github.io
+    desc: CS 缺失学期（中文版）
+  - name: shimohq/chinese-programmer-wrong-pronunciation
+    desc: 程序员易错发音
+    lang: JavaScript
+  - name: k88hudson/git-flight-rules
+    desc: Git 飞行规则
+  - name: ryanhanwu/How-To-Ask-Questions-The-Smart-Way
+    desc: 提问的智慧
+  - name: conventional-commits/conventionalcommits.org
+    desc: Conventional Commits 规范
+    lang: SCSS
+  - name: CollegesChat/university-information
+    desc: 全国高校真实信息
+- id: media-iot
+  name:
+    zh: 流媒体 / IoT
+    en: Media / IoT
+  items:
+  - name: ZLMediaKit/ZLMediaKit
+    desc: 高性能流媒体服务器（RTSP/RTMP/HLS/WebRTC）
+    lang: C++
+  - name: red5pro/streaming-html5
+    desc: HTML5 直播 SDK 示例
+    lang: JavaScript
+  - name: sutro-planet/easyvideotrans
+    desc: 视频翻译工具
+  - name: CuSO4Gem/pytvzhen
+    desc: 视频转文字
+    lang: Python
+  - name: rxtx/rxtx
+    desc: Java 跨平台串口通信库
+    lang: C
+  - name: oldweipro/hik-dev
+    desc: 海康威视 Java 二次开发 Demo
+    lang: Java
+  - name: qemu/qemu
+    desc: 开源虚拟机/模拟器
+    lang: C
+  - name: LaurieWired/XplaneFlightData
+    desc: X-Plane 飞行数据 C++ 示例
+    lang: C++
+- id: docs-books
+  name:
+    zh: 文档 / 书籍
+    en: Docs / Books
+  items:
+  - name: billie66/TLCL
+    desc: 快乐的 Linux 命令行
+  - name: jaywcjlove/linux-command
+    desc: Linux 命令大全搜索
+  - name: jaywcjlove/awesome-mac
+    desc: macOS 优质软件合集
+  - name: jasper-zhang/influxdb-document-cn
+    desc: InfluxDB 中文文档
+  - name: resumejob/awesome-resume
+    desc: 简历模板合集
+  - name: anuraghazra/github-readme-stats
+    desc: GitHub README 动态统计卡
+    lang: JavaScript
+  - name: star-history/star-history
+    desc: GitHub Star 历史曲线图
+    lang: TypeScript
+  - name: academicpages/academicpages.github.io
+    desc: 学术个人主页模板
+  - name: RayeRen/acad-homepage.github.io
+    desc: 现代学术主页模板
+  - name: TonyCrane/slide-template
+    desc: reveal-md 幻灯片模板
+  - name: gin-gonic/gin
+    desc: Go 高性能 Web 框架
+    lang: Go
+- id: inbox
+  name:
+    zh: 待分类
+    en: Inbox
+  items:
+  - name: Anduin2017/CameraVoyeur
+    desc: 摄像头黑入器。（基于RickAstley论文实现）
+    lang: C#
+  - name: YeatsLiao/huzhou-playbox
+    desc: 湖州文化互动小游戏合集（Trae DemoWall）
+    lang: TypeScript
+  - name: ZhongUncle/zhonguncle.github.io
+    desc: ''
+    lang: CSS
+  - name: alibaba/spring-ai-alibaba
+    desc: Agentic AI Framework for Java Developers
+    lang: Java
+  - name: formulahendry/955.WLB
+    desc: 955 不加班的公司名单 - 工作 955，work–life balance (工作与生活的平衡)
+    lang: ''
+  - name: haoel/haoel.github.io
+    desc: ''
+    lang: Shell
+  - name: tesseract-ocr/tesseract
+    desc: Tesseract Open Source OCR Engine (main repository)
+    lang: C++
+  - name: xiaofeihan1/timer-extension
+    desc: ''
+    lang: JavaScript
